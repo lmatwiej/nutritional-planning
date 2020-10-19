@@ -2,6 +2,7 @@ console.log("Page load happened!")
 
 var clearButton = document.getElementById('bsr-clear-button')
 clearButton.onmouseup = clearForm;
+console.log("get clear button");
 
 var submitButton = document.getElementById('bsr-submit-button')
 submitButton.onmouseup = getFormInfo;
