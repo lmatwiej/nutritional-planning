@@ -1,7 +1,23 @@
 console.log("Page load happened!")
 
+var clearButton = document.getElementById('bsr-clear-button')
+clearButton.onmouseup = clearForm;
+
 var submitButton = document.getElementById('bsr-submit-button')
 submitButton.onmouseup = getFormInfo;
+
+function clearForm() {
+    document.getElementById('task-name').value = "";
+    document.getElementById('task-description').value = "";
+    var reminder_title = document.getElementById('reminder-top');
+    reminder_title.innerHTML = "Reminder";
+    var reminder_body = document.getElementById('reminder-body');
+    reminder_body.innerHTML = "Reminder Message";
+    var urgent_label = document.getElementById('urgent-label');
+    if (urgent_label) {
+        urgent_label.remove();
+    }
+}
 
 function getFormInfo(){
     console.log("Entered get Form Info!")
