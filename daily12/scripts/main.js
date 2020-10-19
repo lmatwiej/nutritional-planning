@@ -1,12 +1,12 @@
 console.log("Page load happened!")
 
 var clearButton = document.getElementById('bsr-clear-button')
-clearButton.onmouseup = clearForm;
+// clearButton.onmouseup = clearForm;
 console.log("get clear button");
 
 var submitButton = document.getElementById('bsr-submit-button')
 submitButton.onmouseup = getFormInfo;
-
+/*
 function clearForm() {
     document.getElementById('task-name').value = "";
     document.getElementById('task-description').value = "";
@@ -19,7 +19,7 @@ function clearForm() {
         urgent_label.remove();
     }
 }
-
+*/
 function getFormInfo(){
     console.log("Entered get Form Info!")
     // get text from title, author and story
