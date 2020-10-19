@@ -3,6 +3,19 @@ console.log("Page load happened!")
 var submitButton = document.getElementById('bsr-submit-button')
 submitButton.onmouseup = getFormInfo;
 
+var clearButton = document.getElementById('bsr-clear-button')
+clearButton.onmouseup = clearForm;
+
+function clearForm() {
+    document.getElementById('task-name').value = "";
+    document.getElementById('task-description').value = "";
+    var reminder_title = document.getElementById('reminder-top');
+    reminder_title.innerHTML = "";
+    var reminder_body = document.getElementById('reminder-body');
+    reminder_body.innerHTML = "";
+}
+
+
 function getFormInfo(){
     console.log("Entered get Form Info!")
     // get text from title, author and story
