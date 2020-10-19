@@ -15,7 +15,7 @@
 		<div class="page-header">
     		<h1>Task List and Reminder Utility</h1>      
   		</div>
-		<form class="bsr-form " action="">
+		<form class="bsr-form " action="" onsubmit="return false">
 			<div class="form-group">
 				<label for="tex-input">Task Name</label>
 				<input name="text-input" type="text" class="form-control" id="task-name">
@@ -25,10 +25,9 @@
 				<textarea class="form-control" rows="5" id="task-description"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="checkboxes">Checkbox</label>
-				<div class="checkbox" id="urgency">
+				<div class="checkbox" id="urgency-checkbox">
 					<label>
-						<input type="checkbox" value="">
+						<input type="checkbox" value="urgency-checkbox-text" id="urgency-checkbox-value">
 						Urgent
 					</label>
 				</div>
@@ -40,11 +39,9 @@
     
     <div class="container mt-5">
         <p class="lead" id="reminder-top">
-            Reminder
         </p>
 
         <p id="reminder-body">
-            Reminder Message
         </p>
     </div>
 
