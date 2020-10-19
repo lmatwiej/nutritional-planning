@@ -82,7 +82,7 @@ class FoodController(object):
                 output['food'] = []
 
                 try:
-                    for fid in self.mdb.get_food():
+                    for fid in self.mdb.get_foods():
                         food = self.mdb.get_food(fid)
                         dfood = {'id':fid, 'name':food[0],'group':food[1],'kcal':food[2],'protein':food[3],'fat':food[4],'carb':food[5]}
                         output['food'].append(dfood)
@@ -100,16 +100,17 @@ class FoodController(object):
                 food.append(data['name'])
                 food.append(data['group'])
                 food.append(data['kcal'])
-                food.append(data['protein'])
+                food.append(data['prot'])
+                food.append(data['fat'])
                 food.append(data['carb'])
                 food_id = 1
-                for fid in self.mdb.get_food():
+                for fid in self.mdb.get_foods():
                     food_id = fid
 
                 food_id = food_id + 1
 
-                self.mdb.set_movie(food_id, food)
-                if self.mdb.get_movie(food_id) is None:
+                self.mdb.set_food(food_id, food)
+                if self.mdb.get_food(food_id) is None:
                     output['result'] = 'error'
                     output['message'] = 'Food was not added'
                 else:
@@ -137,11 +138,11 @@ class FoodController(object):
                 output['result'] = 'error'
                 output['message'] = 'Unable to clear all proteins'
             self.mdb.food_fat.clear()
-            if self.mdb.fat_group:
+            if self.mdb.food_fat:
                 output['result'] = 'error'
                 output['message'] = 'Unable to clear all fat'
             self.mdb.food_carb.clear()
-            if self.mdb.fat_carb:
+            if self.mdb.food_carb:
                 output['result'] = 'error'
                 output['message'] = 'Unable to clear all carb'
 

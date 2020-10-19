@@ -7,7 +7,7 @@ PUT /food_name/:food_in
 Update a specific food to the database
 
 DELETE /food_name
-Delete a specifc food given its id
+Delete a specific food given its id
 
 GET /food_name
 Get the index of a specific food

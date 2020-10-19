@@ -1,6 +1,6 @@
 import cherrypy
 from foodController import FoodController
-## from favoritesController import FavoritesController
+from resetController import ResetController
 ## from dataController import DataController
 from food_library import _food_database
 
@@ -24,7 +24,7 @@ def start_service():
 
     dispatcher.connect('food_name_get', '/food_name/:food_id', controller=foodController, action = 'GET_KEY', conditions=dict(method=['GET']))
     dispatcher.connect('food_name_set', '/food_name/:food_id', controller=foodController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
-    dispatcher.connect('food_name_delete', '/food_name', controller=foodController, action = 'DELETE_KEY', conditions=dict(method=['DELETE']))
+    dispatcher.connect('food_name_delete', '/food_name/:food_id', controller=foodController, action = 'DELETE_KEY', conditions=dict(method=['DELETE']))
     dispatcher.connect('food_index_get', '/food_name/', controller=foodController, action = 'GET_INDEX', conditions=dict(method=['GET']))
     dispatcher.connect('food_index_post', '/food_name/', controller=foodController, action = 'POST_INDEX', conditions=dict(method=['POST']))
     dispatcher.connect('food_index_delete', '/food_name/', controller=foodController, action = 'DELETE_INDEX', conditions=dict(method=['DELETE']))
