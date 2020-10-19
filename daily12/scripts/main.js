@@ -7,6 +7,7 @@ var clearButton = document.getElementById('bsr-clear-button')
 clearButton.onmouseup = clearForm;
 
 function clearForm() {
+    console.log("Entered clear form");
     document.getElementById('task-name').value = "";
     document.getElementById('task-description').value = "";
     var reminder_title = document.getElementById('reminder-top');
