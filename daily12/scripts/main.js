@@ -28,7 +28,7 @@ function getFormInfo(){
     console.log('name:' + task_name + ' content: ' + task_description);
 
     // get checkbox state
-    if (document.getElementById('urgency').checked){
+    if (document.getElementById('urgency-checkbox-value').checked){
         console.log("Checked urgency");
         markUrgent();
     } else {
