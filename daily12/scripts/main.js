@@ -29,7 +29,10 @@ function getFormInfo(){
 
     // get checkbox state
     if (document.getElementById('urgency').checked){
+        console.log("Checked urgency");
         markUrgent();
+    } else {
+        console.log("Urgency not checked");
     }
 	
 	reminder_dict={};
