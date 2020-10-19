@@ -46,7 +46,7 @@ function markUrgent() {
 	console.log("Entered markUrgent");
 	var newLabel = document.createElement("span");
 	newLabel.setAttribute("id","urgent-label");
-	newLabel.setAttrbiute("class", "label label-danger");
+	newLabel.setAttribute("class", "label label-danger");
 	newLabel.innerHTML("Urgent Reminder");
 	var div = document.getElementById('reminder-top'); 
 	div.append(newLabel);
