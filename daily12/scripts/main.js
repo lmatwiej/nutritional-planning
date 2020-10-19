@@ -1,25 +1,8 @@
 console.log("Page load happened!")
 
-var clearButton = document.getElementById('bsr-clear-button')
-// clearButton.onmouseup = clearForm;
-console.log("get clear button");
-
 var submitButton = document.getElementById('bsr-submit-button')
 submitButton.onmouseup = getFormInfo;
-/*
-function clearForm() {
-    document.getElementById('task-name').value = "";
-    document.getElementById('task-description').value = "";
-    var reminder_title = document.getElementById('reminder-top');
-    reminder_title.innerHTML = "Reminder";
-    var reminder_body = document.getElementById('reminder-body');
-    reminder_body.innerHTML = "Reminder Message";
-    var urgent_label = document.getElementById('urgent-label');
-    if (urgent_label) {
-        urgent_label.remove();
-    }
-}
-*/
+
 function getFormInfo(){
     console.log("Entered get Form Info!")
     // get text from title, author and story
@@ -30,7 +13,7 @@ function getFormInfo(){
     // get checkbox state
     if (document.getElementById('urgency-checkbox-value').checked){
         console.log("Checked urgency");
-        markUrgent();
+        task_name += " (URGENT)";
     } else {
         console.log("Urgency not checked");
     }
@@ -42,20 +25,9 @@ function getFormInfo(){
 
 }
 
-function markUrgent() {
-	console.log("Entered markUrgent");
-	var newLabel = document.createElement("span");
-	newLabel.setAttribute("id","urgent-label");
-	newLabel.setAttribute("class", "label label-danger");
-	newLabel.innerHTML("Urgent Reminder");
-	var div = document.getElementById('reminder-top'); 
-	div.append(newLabel);
-}
-
 function displayReminder(reminder_dict){
     console.log('entered displayReminder!');
     console.log(reminder_dict);
-    // get fields from story and display in label.
     var reminder_title = document.getElementById('reminder-top');
     reminder_title.innerHTML = reminder_dict['name'];
 	
