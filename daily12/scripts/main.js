@@ -25,7 +25,7 @@ function getFormInfo(){
     // get text from title, author and story
     var task_name = document.getElementById('task-name').value;
     var task_description = document.getElementById('task-description').value;
-    console.log('name:' + task_name + ' conent: ' + task_description);
+    console.log('name:' + task_name + ' content: ' + task_description);
 
     // get checkbox state
     if (document.getElementById('urgency').checked){
