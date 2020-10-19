@@ -23,13 +23,20 @@ function getFormInfo(){
 }
 
 function markUrgent() {
+	console.log("Entered markUrgent");
+	var newLabel = document.createElement("span");
+	newLabel.setAttribute("id","urgent-label");
+	newLabel.setAttrbiute("class", "label label-danger");
+	newLabel.innerHTML("Urgent Reminder");
+	var div = document.getElementById('reminder-top'); 
+	div.append(newLabel);
 }
 
 function displayReminder(reminder_dict){
     console.log('entered displayReminder!');
     console.log(reminder_dict);
     // get fields from story and display in label.
-    var reminder_title = document.getElementById('reminder_top');
+    var reminder_title = document.getElementById('reminder-top');
     reminder_title.innerHTML = reminder_dict['name'];
 	
 	var reminder_body = document.getElementById('reminder-body');
