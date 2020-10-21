@@ -94,6 +94,6 @@ function updateOutputWithResponse(code, response_text){
 
 function formatText(code, response_text) {
     var response_json = JSON.parse(response_text);
-    text = code + "is the ISO 3166-1 code for " + response_json["name"];
+    text = code + " is the ISO 3166-1 code for " + response_json["name"];
     return text;
 }
