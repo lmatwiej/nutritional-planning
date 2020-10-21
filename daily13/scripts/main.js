@@ -12,7 +12,7 @@ function getFormInfo(){
 
 } // end of get form info
 
-function makeNetworkCallToAgeApi(name){
+function makeNetworkCallToApi(name){
     console.log('entered make nw call' + name);
     // set up url
     var xhr = new XMLHttpRequest(); // 1 - creating request object
