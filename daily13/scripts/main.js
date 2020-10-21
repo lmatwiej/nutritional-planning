@@ -83,11 +83,17 @@ function updateOutputWithResponse(code, response_text){
     para_item = document.createElement("p"); // "label" is a classname
     para_item.setAttribute("id", "country-info" ); // setAttribute(property_name, value) so here id is property name of button object
 
-    var formattedText = "US of A";// formatText(response_text);
+    var formattedText = formatText(code, response_text);
     var para_text = document.createTextNode(formattedText); // creating new text
     para_item.appendChild(para_text); // adding something to button with appendChild()
 
     var response = document.getElementById("response-div");
     response.appendChild(para_item);
     
+}
+
+function formatText(code, response_text) {
+    var response_json = JSON.parse(response_text);
+    text = code + "is the ISO 3166-1 code for " + response_json["name"];
+    return text;
 }
