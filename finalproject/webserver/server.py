@@ -5,6 +5,15 @@ from resetController import ResetController
 from food_library import _food_database
 
 
+class optionsController:
+    def OPTIONS(self, *args, **kwargs):
+        return ""
+
+def CORS():
+    cherrypy.response.headers["Access-Control-Allow-Origin"] = "*"
+    cherrypy.response.headers["Access-Control-Allow-Methods"] = "GET, PUT, POST, DELETE, OPTIONS"
+    cherrypy.response.headers["Access-Control-Allow-Credentials"] = "true"
+
 def start_service():
     dispatcher = cherrypy.dispatch.RoutesDispatcher()
 
@@ -18,8 +27,7 @@ def start_service():
 
 
     ## dispatcher.connect('favorites_put', '/favorites/:key', controller=favoriteController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
-    ## dispatcher.connect('favorites_post', '/favorites', controller=favoriteController, action = 'POST_KEY', conditions=dict(method=['POST']))
-    ## dispatcher.connect('favorites_get', '/favorites', controller=favoriteController, action = 'GET_KEY', conditions=dict(method=['GET']))
+    ## dispatcher.connect('favorites_get', '/favorites/:key', controller=favoriteController, action = 'GET_KEY', conditions=dict(method=['GET']))
     ## dispatcher.connect('favorites_delete', '/favorites/:key', controller=favoritesController, action = 'DELETE_KEY', conditions=dict(method=['DELETE']))
 
     dispatcher.connect('food_name_get', '/food_name/:food_id', controller=foodController, action = 'GET_KEY', conditions=dict(method=['GET']))
@@ -34,6 +42,13 @@ def start_service():
 
     ## dispatcher.connect('data_get', '/data', controller=dataController, action = 'GET_KEY', conditions=dict(method=['GET']))
 
+    # CORS related options connections
+    dispatcher.connect('movie_key_options', '/movies/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('movie_options', '/movies/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('reset_key_options', '/reset/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('reset_options', '/reset/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('rating_options', '/ratings/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+
 
     conf = {
 	'global': {
@@ -43,6 +58,7 @@ def start_service():
 	    },
 	'/': {
 	    'request.dispatch': dispatcher,
+        'tools.CORS.on':True,
 	    }
     }
 
@@ -54,4 +70,5 @@ def start_service():
 
 
 if __name__ == '__main__':
+    cherrypy.tools.CORS = cherrypy.Tool('before_finalize', CORS)
     start_service()
