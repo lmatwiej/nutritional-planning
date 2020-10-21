@@ -7,8 +7,8 @@ function getFormInfo(){
     console.log('entered getFormInfo!');
     // call displayinfo
     var name = document.getElementById("name-text").value;
-    console.log('Number you entered is ' + name);
-    makeNetworkCallToAgeApi(name);
+    console.log('Name you entered is ' + name);
+    makeNetworkCallToApi(name);
 
 } // end of get form info
 
@@ -16,7 +16,7 @@ function makeNetworkCallToAgeApi(name){
     console.log('entered make nw call' + name);
     // set up url
     var xhr = new XMLHttpRequest(); // 1 - creating request object
-    var url = "https://api.agify.io/?name=" + name;
+    var url = "https://api.nationalize.io?name=" + name;
     xhr.open("GET", url, true); // 2 - associates request attributes with xhr
 
     // set up onload
@@ -24,7 +24,7 @@ function makeNetworkCallToAgeApi(name){
         // must be written before send
         console.log(xhr.responseText);
         // do something
-        updateAgeWithResponse(name, xhr.responseText);
+        updateWithFirstResponse(name, xhr.responseText);
     }
 
     // set up onerror
@@ -37,25 +37,25 @@ function makeNetworkCallToAgeApi(name){
 
 } // end of make nw call
 
-function updateAgeWithResponse(name, response_text){
+function updateAgeWithFirstResponse(name, response_text){
     var response_json = JSON.parse(response_text);
     // update a label
     var label1 = document.getElementById("response-line1");
 
-    if(response_json['age'] == null){
-        label1.innerHTML = 'Apologies, we could not find your name.'
+    if(response_json['country'] == null){
+        label1.innerHTML = 'Apologies, we could not predict your country.'
     } else{
-        label1.innerHTML =  name + ', your age is ' + response_json['age'];
-        var age = parseInt(response_json['age']);
-        makeNetworkCallToNumbers(age);
+        var code = response_json['country'][0]['country_id'];
+        label1.innerHTML =  name + ', your assigned home country code is ' + code;
+        makeNetworkCallToCountries(code);
     }
 } // end of updateAgeWithResponse
 
-function makeNetworkCallToNumbers(age){
-    console.log('entered make nw call' + age);
+function makeNetworkCallToCountries(code){
+    console.log('entered make nw call ' + code);
     // set up url
     var xhr = new XMLHttpRequest(); // 1 - creating request object
-    var url = "https://numbersapi.com/" + age;
+    var url = "https://restcountries.eu/rest/v2/alpha/" + code;
     console.log(url);
     xhr.open("GET", url, true) // 2 - associates request attributes with xhr
 
@@ -64,7 +64,7 @@ function makeNetworkCallToNumbers(age){
         // must be written before send
         console.log(xhr.responseText);
         // do something
-        updateTriviaWithResponse(age, xhr.responseText);
+        updateOutputWithResponse(code, xhr.responseText);
     }
 
     // set up onerror
@@ -77,11 +77,8 @@ function makeNetworkCallToNumbers(age){
 
 } // end of make nw call
 
-function updateTriviaWithResponse(age, response_text){
-    // update a label
-    var label2 = document.getElementById("response-line2");
-    label2.innerHTML = response_text;
-
+function updateOutputWithResponse(code, response_text){
+/*
     // dynamically adding label
     label_item = document.createElement("label"); // "label" is a classname
     label_item.setAttribute("id", "dynamic-label" ); // setAttribute(property_name, value) so here id is property name of button object
@@ -97,5 +94,5 @@ function updateTriviaWithResponse(age, response_text){
     // adding label as sibling to paragraphs
     var response_div = document.getElementById("response-div");
     response_div.appendChild(label_item);
-
+*/
 } // end of updateTriviaWithResponse
