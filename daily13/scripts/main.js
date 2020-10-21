@@ -78,21 +78,16 @@ function makeNetworkCallToCountries(code){
 } // end of make nw call
 
 function updateOutputWithResponse(code, response_text){
-/*
+
     // dynamically adding label
-    label_item = document.createElement("label"); // "label" is a classname
-    label_item.setAttribute("id", "dynamic-label" ); // setAttribute(property_name, value) so here id is property name of button object
+    para_item = document.createElement("p"); // "label" is a classname
+    para_item.setAttribute("id", "country-info" ); // setAttribute(property_name, value) so here id is property name of button object
 
-    var item_text = document.createTextNode(response_text); // creating new text
-    label_item.appendChild(item_text); // adding something to button with appendChild()
+    var formattedText = "US of A";// formatText(response_text);
+    var para_text = document.createTextNode(formattedtext); // creating new text
+    para_item.appendChild(para_text); // adding something to button with appendChild()
 
-    // option 1: directly add to document
-    // adding label to document
-    //document.body.appendChild(label_item);
-
-    // option 2:
-    // adding label as sibling to paragraphs
-    var response_div = document.getElementById("response-div");
-    response_div.appendChild(label_item);
-*/
-} // end of updateTriviaWithResponse
+    var response = document.getElementById("response-div");
+    response.appendChild(para_item);
+    
+}
