@@ -37,7 +37,7 @@ function makeNetworkCallToApi(name){
 
 } // end of make nw call
 
-function updateAgeWithFirstResponse(name, response_text){
+function updateWithFirstResponse(name, response_text){
     var response_json = JSON.parse(response_text);
     // update a label
     var label1 = document.getElementById("response-line1");
