@@ -56,6 +56,7 @@ function makeNetworkCallToNumbers(age){
     // set up url
     var xhr = new XMLHttpRequest(); // 1 - creating request object
     var url = "https://numbersapi.com/" + age;
+    console.log(url);
     xhr.open("GET", url, true) // 2 - associates request attributes with xhr
 
     // set up onload
