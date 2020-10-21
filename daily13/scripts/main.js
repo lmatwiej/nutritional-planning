@@ -84,7 +84,7 @@ function updateOutputWithResponse(code, response_text){
     para_item.setAttribute("id", "country-info" ); // setAttribute(property_name, value) so here id is property name of button object
 
     var formattedText = "US of A";// formatText(response_text);
-    var para_text = document.createTextNode(formattedtext); // creating new text
+    var para_text = document.createTextNode(formattedText); // creating new text
     para_item.appendChild(para_text); // adding something to button with appendChild()
 
     var response = document.getElementById("response-div");
