@@ -22,7 +22,7 @@ function getFormInfo(){
         action = "DELETE";
     }
 
-    var key = null;
+    var key = "";
     if (document.getElementById("checkbox-use-key").checked) {
         key = document.getElementById("input-key");
     }
@@ -40,7 +40,7 @@ function makeRequest(url_base, port_num, action, key, message_body){
 
     // set up url
     var xhr = new XMLHttpRequest(); // 1 - creating request object
-    var url = url_base + ":" + port_num;
+    var url = url_base + ":" + port_num + "/movies/" + key;
     
     xhr.open(action, url, true); // 2 - associates request attributes with xhr
 
@@ -58,7 +58,7 @@ function makeRequest(url_base, port_num, action, key, message_body){
     }
 
     // actually make the network call
-    xhr.send(null) // last step - this actually makes the request
+    xhr.send(message_body) // last step - this actually makes the request
 
 } // end of make nw call
 
