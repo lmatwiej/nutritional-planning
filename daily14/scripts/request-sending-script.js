@@ -1,7 +1,8 @@
-console.log('page load - entered main.js for js-other api');
+console.log('page load');
 
 var sendButton = document.getElementById('send-button');
 sendButton.onmouseup = getFormInfo;
+console.log('After send button');
 
 function getFormInfo(){
     console.log('entered getFormInfo!');
