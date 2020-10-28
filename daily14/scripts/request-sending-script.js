@@ -25,7 +25,7 @@ function getFormInfo(){
 
     var key = "";
     if (document.getElementById("checkbox-use-key").checked) {
-        key = document.getElementById("input-key");
+        key = document.getElementById("input-key").value;
     }
     
     var message_body = null;
