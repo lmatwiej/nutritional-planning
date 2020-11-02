@@ -27,10 +27,23 @@ class _favorites_log:
                     filtered_favs[key] = value
             return filtered_favs
 
+        # Add a favorite food to the log
         def add_favorite(self, name, rating):
-            self.favorites[name] = rating
+            if name in self.favorites:
+                return 1
+            else:
+                self.favorites[name] = rating
+                return 0
 
+        # Update the rating for a favorite food
+        def update_rating(self, name, rating):
+            if name in self.favorites:
+                self.favorites[name] = rating
+                return 0
+            else:
+                return 1
 
+        # Delete a favorite from the list
         def delete_favorite(self, name):
             del(self.favorites[name])
 
