@@ -43,11 +43,11 @@ def start_service():
     ## dispatcher.connect('data_get', '/data', controller=dataController, action = 'GET_KEY', conditions=dict(method=['GET']))
 
     # CORS related options connections
-    dispatcher.connect('movie_key_options', '/movies/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
-    dispatcher.connect('movie_options', '/movies/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
-    dispatcher.connect('reset_key_options', '/reset/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
-    dispatcher.connect('reset_options', '/reset/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
-    dispatcher.connect('rating_options', '/ratings/:movie_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('food_key_options', '/food_name/:food_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('food_options', '/food_name/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('food_key_options', '/reset/:food_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('food_options', '/reset/', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
+    dispatcher.connect('food_options', '/favorites/:food_id', controller=optionsController, action = 'OPTIONS', conditions=dict(method=['OPTIONS']))
 
 
     conf = {
