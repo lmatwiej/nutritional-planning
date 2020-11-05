@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
 	<!-- Metadata for the Webpage -->
@@ -126,4 +127,108 @@
 
 </body>
 
+=======
+<head>
+
+<!-- Metadata for the Webpage -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/style.css">
+<title>Title</title>
+
+<!-- Bootstrap CSS files-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Font Awesome Web Icons -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <script src="scripts/main.js"></script>
+
+<!-- Navbar -->
+<nav class="navbar container-fluid navbar-default">
+  <div class="container">
+    <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span
+          class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Programming Paradigms Final Project</a></div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://corgis-edu.github.io/corgis/csv/food/">Data Sources</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- This is where your body content goes... -->
+
+<div class="jumbotron" style="background-size: cover; background-image: url('https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg');">
+   <h1 style="color:#FFFFFF;text-shadow: 1px 1px gray;" class="jumbotronic">      Meal Recommendations </h1>
+   <h6 style=" text-shadow: 1px 1px gray; color:#FFFFFF">Nutritional Facts of Specific Foods</h6>
+</div>
+
+
+<div id="wrapper" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <div class="row">
+        <div class="column">
+
+          <h2>Food Information Selection</h2>
+          <br></br>
+          <label for="tex-input">Food Input</label>
+          <input name="text-input" type="text" class="form-control" id="food-input" placeholder="Enter the name of the Food">
+          <br></br>
+          <button type="submit" class="btn btn-primary" id="send-button">Send</button>
+
+          <div>
+              <label id="response-label">Food Reccomendations:</label>
+          </div>
+
+          <div>
+              <label id="answer-label">-</label>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+          <h2>Favorites Section</h2>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- col-sm-12 -->
+  </div>
+  <!-- row -->
+</div>
+<!-- wrapper div.container -->
+
+<!-- jQuery Javascript Library (required by Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function () {
+  $('.group').hide();
+  $('#student').show();
+  $('#selectMe').change(function () {
+    $('.group').hide();
+    $('#'+$(this).val()).show();
+  })
+$("input[placeholder]").each(function () {
+        $(this).attr('size', $(this).attr('placeholder').length);
+    });
+});
+
+</script>
+
+</body>
+>>>>>>> 06be47695240812aab8cca6afbe39c33811d5972
 </html>
