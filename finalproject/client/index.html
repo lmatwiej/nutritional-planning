@@ -1,5 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+
+<head>
+	<!-- Metadata for the Webpage -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/style.css">
+	<title>Title</title>
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar container-fluid navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Programming Paradigms Final Project</a></div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://corgis-edu.github.io/corgis/csv/food/">Data Sources</a></li>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- This is where your body content goes... -->
+	<div class="jumbotron" style="background-size: cover; background-image: url('https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg');">
+		<h1 style="color:#FFFFFF;text-shadow: 1px 1px gray;" class="jumbotronic">      Meal Recommendations </h1>
+		<h6 style=" text-shadow: 1px 1px gray; color:#FFFFFF">Nutritional Facts of Specific Foods</h6> </div>
+	<div id="wrapper" class="container">
+		<div class="row">
+			<div>
+				<div class="row">
+					<div >
+							<div>
+								<div class="column">
+									<h2>Meal Recommendation Selection</h2>
+									<form class="bsr-form " action="">
+										<select id="selectMe">
+											<option value="none">Select an Option</option>
+											<option value="food">Food</option>
+											<option value="budgnut">Budget and Nutritional Facts</option>
+										</select>
+										<br></br>
+										<div id="food" class="group">
+											<div class="form-group">
+												<label for="tex-input">Food Input</label>
+												<input name="text-input" type="text" class="form-control" id="food-input" placeholder="Enter the name of the Food">
+												<a role='button' id="send-button" class='btn btn-default'><i class="fa fa-fw fa-500px" aria-hidden="true"></i>Submit</a>
+                        <button type="reset" class="btn btn-default" id="clear-button">Clear</button>
+                        <br></br>
+												<div>
+													<label id="response-label">Nutritional Facts:</label>
+												</div>
+												<div>
+													<label id="answer-label">-</label>
+												</div>
+											</div>
+										</div>
+										<div id="budgnut" class="group">
+											<div class="form-group">
+
+												<div class="form-group" class="column">
+													<label for="tex-input">Calories</label>
+													<input name="text-input" type="text" class="form-control" id="calstext" placeholder="Enter Calorie Count">
+                        </div>
+												<br></br>
+												<div class="form-group">
+													<label for="tex-input">Proteins</label>
+													<input name="text-input" type="text" class="form-control" id="protstext" placeholder="Enter Protein Count"> </div>
+												<br></br>
+												<div class="form-group">
+													<label for="tex-input">Fats</label>
+													<input name="text-input" type="text" class="form-control" id="fatstext" placeholder="Enter Fats Count"> </div>
+												<br></br>
+												<div class="form-group">
+													<label for="tex-input">Carbohydrates</label>
+													<input name="text-input" type="text" class="form-control" id="carbstext" placeholder="Enter Carbs Count">
+                        </div>
+                          <a role='button' id="send2-button" class='btn btn-default'><i class="fa fa-fw fa-500px" aria-hidden="true"></i>Submit</a>
+													<button type="reset" class="btn btn-default" id="clear-button">Clear</button>
+                        <br></br>
+												<div>
+													<label id="response-label">Food Reccomendations:</label>
+												</div>
+												<div>
+													<label id="answer2-label">-</label>
+												</div>
+
+											</div>
+
+									</form>
+
+
+									</div>
+							<!-- col-sm-12 -->
+						</div>
+
+            <div class="column">
+              <h2>Favorites Section</h2> </div>
+            </div>
+						<!-- row -->
+					</div>
+					<!-- wrapper div.container -->
+					<!-- jQuery Javascript Library (required by Bootstrap) -->
+					<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+					<!-- Bootstrap JS -->
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+					<script src="scripts/main.js"></script>
+					<script>
+					$(document).ready(function() {
+						$('.group').hide();
+						$('#student').show();
+						$('#selectMe').change(function() {
+							$('.group').hide();
+							$('#' + $(this).val()).show();
+						})
+						$("input[placeholder]").each(function() {
+							$(this).attr('size', $(this).attr('placeholder').length);
+						});
+					});
+					</script>
+
+</body>
+
+=======
 <head>
 
 <!-- Metadata for the Webpage -->
@@ -102,4 +231,5 @@ $("input[placeholder]").each(function () {
 </script>
 
 </body>
+>>>>>>> 06be47695240812aab8cca6afbe39c33811d5972
 </html>
