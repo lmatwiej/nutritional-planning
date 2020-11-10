@@ -1,4 +1,4 @@
-gclass _food_database:
+class _food_database:
 
        def __init__(self):
         self.food_group = dict()
@@ -20,7 +20,6 @@ gclass _food_database:
                 prot = float(components[4])
                 fat = float(components[5])
                 carb = float(components[6])
-                #print("The ID is", id, "and the name is", group, "and genres is", shortd, "!")
                 self.food_group[fid] = group
                 self.food_name[fid] = name
                 self.food_kcal[fid] = kcal
@@ -29,7 +28,7 @@ gclass _food_database:
                 self.food_carb[fid] = carb
         f.close()
 
-       def get_food(self):
+       def get_foods(self):
         return self.food_name.keys()
 
        def get_food(self, fid):
