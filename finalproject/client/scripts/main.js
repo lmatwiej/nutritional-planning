@@ -59,7 +59,7 @@ function makeRequest(url_base, port_num, action, key, message_body) {
         html += "<td>" + "Protein" + "</td>";
         html += "<td>" + "Fat" + "</td>";
         html += "<td>" + "Carbs" + "</td>";
-        html += "<td>" + "Favorite?" + "</td>";
+        html += "<td>" + "Food ID" + "</td>";
 
         html += "</tr>";
         for (var i = 0; i < output.length; i++) {
@@ -70,7 +70,7 @@ function makeRequest(url_base, port_num, action, key, message_body) {
             html += "<td>" + output[i].protein + "</td>";
             html += "<td>" + output[i].fat + "</td>";
             html += "<td>" + output[i].carb + "</td>";
-            html += "<td><button>★</button></td>";
+            html += "<td>" + output[i].id + "</td>";
 
             html += "</tr>";
 
