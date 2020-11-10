@@ -1,0 +1,987 @@
+1::BUTTER::Dairy and Egg Products::717::0.85::81.11::0.06
+2::BLUE CHEESE::Dairy and Egg Products::353::21.4::28.74::2.34
+3::BRICK CHEESE::Dairy and Egg Products::371::23.24::29.68::2.79
+4::BRIE CHEESE::Dairy and Egg Products::334::20.75::27.68::0.45
+5::CAMEMBERT CHEESE::Dairy and Egg Products::300::19.8::24.26::0.46
+6::CARAWAY CHEESE::Dairy and Egg Products::376::25.18::29.2::3.06
+7::CHEDDAR CHEESE::Dairy and Egg Products::406::24.04::33.82::1.33
+8::CHESHIRE CHEESE::Dairy and Egg Products::387::23.37::30.6::4.78
+9::COLBY CHEESE::Dairy and Egg Products::394::23.76::32.11::2.57
+10::COTTAGE CHEESE::Dairy and Egg Products::98::11.12::4.3::3.38
+11::CREAM CHEESE::Dairy and Egg Products::342::5.93::34.24::4.07
+12::EDAM CHEESE::Dairy and Egg Products::357::24.99::27.8::1.43
+13::FETA CHEESE::Dairy and Egg Products::264::14.21::21.28::4.09
+14::FONTINA CHEESE::Dairy and Egg Products::389::25.6::31.14::1.55
+15::GJETOST CHEESE::Dairy and Egg Products::466::9.65::29.51::42.65
+16::GOUDA CHEESE::Dairy and Egg Products::356::24.94::27.44::2.22
+17::GRUYERE CHEESE::Dairy and Egg Products::413::29.81::32.34::0.36
+18::LIMBURGER CHEESE::Dairy and Egg Products::327::20.05::27.25::0.49
+19::MONTEREY CHEESE::Dairy and Egg Products::373::24.48::30.28::0.68
+20::MOZZARELLA CHEESE::Dairy and Egg Products::300::22.17::22.35::2.19
+21::MUENSTER CHEESE::Dairy and Egg Products::368::23.41::30.04::1.12
+22::NEUFCHATEL CHEESE::Dairy and Egg Products::253::9.15::22.78::3.59
+23::PARMESAN CHEESE::Dairy and Egg Products::420::28.42::27.84::13.91
+24::PORT DE SALUT CHEESE::Dairy and Egg Products::352::23.78::28.2::0.57
+25::PROVOLONE CHEESE::Dairy and Egg Products::351::25.58::26.62::2.14
+26::RICOTTA CHEESE::Dairy and Egg Products::174::11.26::12.98::3.04
+27::CHEESE,ROMANO::Dairy and Egg Products::387::31.8::26.94::3.63
+28::CHEESE,ROQUEFORT::Dairy and Egg Products::369::21.54::30.64::2
+29::CHEESE,SWISS::Dairy and Egg Products::380::26.93::27.8::5.38
+30::CHEESE,TILSIT::Dairy and Egg Products::340::24.41::25.98::1.88
+31::WHIPPED CREAM::Dairy and Egg Products::257::3.2::22.22::12.49
+32::SOUR CREAM::Dairy and Egg Products::135::2.94::12::4.26
+33::EGGNOG::Dairy and Egg Products::88::4.55::4.19::8.05
+34::CHEESE,AMERICAN::Dairy and Egg Products::126::21.05::0::10.53
+35::WHOLE MILK::Dairy and Egg Products::61::3.15::3.25::4.8
+36::LOWFAT MILK::Dairy and Egg Products::42::3.37::0.97::4.99
+37::BUTTERMILK::Dairy and Egg Products::387::34.3::5.78::49
+38::CHOCOLATE MILK::Dairy and Egg Products::83::3.17::3.39::10.34
+39::PLAIN YOGURT::Dairy and Egg Products::61::3.47::3.25::4.66
+40::FRUIT YOGURT::Dairy and Egg Products::99::3.98::1.15::18.64
+41::YOGURT,FRUIT,LOFAT,10 GRAMS PROT PER 8 OZ::Dairy and Egg Products::102::4.37::1.08::19.05
+42::YOGURT,FRUIT,LOFAT,11 GRAMS PROT PER 8 OZ::Dairy and Egg Products::105::4.86::1.41::18.6
+43::EGG WHITE::Dairy and Egg Products::143::12.56::9.51::0.72
+44::EGG YOLK::Dairy and Egg Products::322::15.86::26.54::3.59
+45::WHOLE EGG::Dairy and Egg Products::196::13.61::14.84::0.83
+46::DULCE DE LECHE::Dairy and Egg Products::315::6.84::7.35::55.35
+47::SOFT SERVE CHOCOLATE ICE CREAM::Dairy and Egg Products::222::4.1::13::22.2
+48::ICE CREAM SANDWICH::Dairy and Egg Products::237::4.29::8.57::37.14
+49::ICE CREAM::Dairy and Egg Products::240::3.7::7.4::39.6
+50::ANISE SEED::Spices and Herbs::337::17.6::15.9::50.02
+51::SPICES,BASIL,DRIED::Spices and Herbs::233::22.98::4.07::47.75
+52::SPICES,BAY LEAF::Spices and Herbs::313::7.61::8.36::74.97
+53::CARAWAY SEED::Spices and Herbs::333::19.77::14.59::49.9
+54::SPICES,CARDAMOM::Spices and Herbs::311::10.76::6.7::68.47
+55::CELERY SEED::Spices and Herbs::392::18.07::25.27::41.35
+56::CHERVIL,DRIED::Spices and Herbs::237::23.2::3.9::49.1
+57::CHILI POWDER::Spices and Herbs::282::13.46::14.28::49.7
+58::CINNAMON,GROUND::Spices and Herbs::247::3.99::1.24::80.59
+59::CLOVES,GROUND::Spices and Herbs::274::5.97::13::65.53
+60::CORIANDER LEAF,DRIED::Spices and Herbs::279::21.93::4.78::52.1
+61::CORIANDER SEED::Spices and Herbs::298::12.37::17.77::54.99
+62::CUMIN SEED::Spices and Herbs::375::17.81::22.27::44.24
+63::CURRY POWDER::Spices and Herbs::325::14.29::14.01::55.83
+64::DILL SEED::Spices and Herbs::305::15.98::14.54::55.17
+65::DILL WEED,DRIED::Spices and Herbs::253::19.96::4.36::55.82
+66::FENNEL SEED::Spices and Herbs::345::15.8::14.87::52.29
+67::FENUGREEK SEED::Spices and Herbs::323::23::6.41::58.35
+68::GARLIC POWDER::Spices and Herbs::331::16.55::0.73::72.73
+69::GROUND GINGER::Spices and Herbs::335::8.98::4.24::71.62
+70::GROUND MACE::Spices and Herbs::475::6.71::32.38::50.5
+71::DRIED MARJORAM::Spices and Herbs::271::12.66::7.04::60.56
+72::GROUND MUSTARD SEED::Spices and Herbs::508::26.08::36.24::28.09
+73::GROUND NUTMEG::Spices and Herbs::525::5.84::36.31::49.29
+74::ONION POWDER::Spices and Herbs::341::10.41::1.04::79.12
+75::DRIED OREGANO::Spices and Herbs::265::9::4.28::68.92
+76::PAPRIKA::Spices and Herbs::282::14.14::12.89::53.99
+77::DRIED PARSLEY::Spices and Herbs::292::26.63::5.48::50.64
+78::BLACK PEPPER::Spices and Herbs::251::10.39::3.26::63.95
+79::CAYENNE PEPPER::Spices and Herbs::318::12.01::17.27::56.63
+80::WHITE PEPPER::Spices and Herbs::296::10.4::2.12::68.61
+81::POPPY SEED::Spices and Herbs::525::17.99::41.56::28.13
+82::POULTRY SEASONING::Spices and Herbs::307::9.59::7.53::65.59
+83::PUMPKIN PIE SPICE::Spices and Herbs::342::5.76::12.6::69.28
+84::DRIED ROSEMARY::Spices and Herbs::331::4.88::15.22::64.06
+85::SAFFRON::Spices and Herbs::310::11.43::5.85::65.37
+86::GROUND SAGE::Spices and Herbs::315::10.63::12.75::60.73
+87::GROUND SAVORY::Spices and Herbs::272::6.73::5.91::68.73
+88::DRIED TARRAGON::Spices and Herbs::295::22.77::7.24::50.22
+89::DRIED THYME::Spices and Herbs::276::9.11::7.43::63.94
+90::GROUND TURMERIC::Spices and Herbs::312::9.68::3.25::67.14
+91::FRESH BASIL::Spices and Herbs::23::3.15::0.64::2.65
+92::DILL WEED::Spices and Herbs::43::3.46::1.12::7.02
+93::YELLOW MUSTARD::Spices and Herbs::60::3.74::3.34::5.83
+94::TABLE SALT::Spices and Herbs::0::0::0::0
+95::CIDER VINEGAR::Spices and Herbs::21::0::0::0.93
+96::FRESH THYME::Spices and Herbs::101::5.56::1.68::24.45
+97::VANILLA EXTRACT::Spices and Herbs::288::0.06::0.06::12.65
+98::CAPERS::Spices and Herbs::23::2.36::0.86::4.89
+99::HORSERADISH::Spices and Herbs::48::1.18::0.69::11.29
+100::ROSEMARY::Spices and Herbs::131::3.31::5.86::20.7
+101::PEPPERMINT::Spices and Herbs::70::3.75::0.94::14.89
+102::SPEARMINT::Spices and Herbs::44::3.29::0.73::8.41
+103::SPEARMINT,DRIED::Spices and Herbs::285::19.93::6.03::52.04
+104::RED WINE VINEGAR::Spices and Herbs::19::0.04::0::0.27
+105::BALSAMIC VINEGAR::Spices and Herbs::88::0.49::0::17.03
+106::DRY TACO SEASONING MIX::Spices and Herbs::188::0::0::56.29
+107::LARD::Fats and Oils::902::0::100::0
+108::SALAD DRESSING::Fats and Oils::250::0.65::21.6::14.78
+109::FRENCH DRESSING::Fats and Oils::222::0.58::11.52::31.22
+110::ITALIAN DRESSING::Fats and Oils::102::0.39::6.68::9.99
+111::1000 ISLAND DRESSING::Fats and Oils::195::0.83::11.32::24.06
+112::SHORTENING::Fats and Oils::884::0::100::0
+113::SOYBEAN OIL::Fats and Oils::884::0::100::0
+114::RICE BRAN OIL::Fats and Oils::884::0::100::0
+115::PEANUT OIL::Fats and Oils::884::0::100::0
+116::COCONUT OIL::Fats and Oils::862::0::100::0
+117::OLIVE OIL::Fats and Oils::884::0::100::0
+118::PALM OIL::Fats and Oils::884::0::100::0
+119::SESAME OIL::Fats and Oils::884::0::100::0
+120::SUNFLOWER OIL::Fats and Oils::884::0::100::0
+121::MARGARINE::Fats and Oils::719::0.9::80.5::0.9
+122::FISH OIL::Fats and Oils::902::0::100::0
+123::MAYONNAISE::Fats and Oils::361::0.37::40::0
+124::ROTISSERIE CHICKEN::Poultry Products::144::28.04::3.57::0
+125::CHICKEN LIVER::Poultry Products::119::16.92::4.83::0.73
+126::CHICKEN::Poultry Products::213::17.09::15.46::0.09
+127::CANADA GOOSE BREAST MEAT::Poultry Products::133::24.31::4.02::0
+128::DUCK MEAT::Poultry Products::404::11.49::39.34::0
+129::GOOSE MEAT::Poultry Products::371::15.86::33.62::0
+130::PHEASANT::Poultry Products::181::22.7::9.29::0
+131::QUAIL MEAT::Poultry Products::134::21.76::4.53::0
+132::QUAIL BREAST::Poultry Products::123::22.59::2.99::0
+133::TURKEY MEAT::Poultry Products::143::21.64::5.64::0.13
+134::TURKEY BREAST::Poultry Products::126::22.16::3.46::0
+135::TURKEY THIGH::Poultry Products::157::18.8::8.54::0
+136::TURKEY ROASTED::Poultry Products::120::17.6::2.2::6.4
+137::TURKEY STEAKS::Poultry Products::279::14.2::16.9::17
+138::GROUND TURKEY::Poultry Products::148::19.66::7.66::0
+139::CREAM OF ASPARAGUS SOUP::Soups, Sauces, and Gravies::69::1.82::3.26::8.52
+140::BLACK BEAN SOUP::Soups, Sauces, and Gravies::91::4.83::1.32::15.42
+141::CAMPBELL'S RED & WHITE,BEEFY MUSHROOM SOUP::Soups, Sauces, and Gravies::40::2.38::1.59::4.76
+142::BEAN WITH PORK SOUP::Soups, Sauces, and Gravies::129::5.88::4.42::16.97
+143::CREAM OF CELERY SOUP::Soups, Sauces, and Gravies::72::1.32::4.46::7.03
+144::SOUP,CHS,CND,COND::Soups, Sauces, and Gravies::82::0.8::3.92::11.3
+145::CHICKEN WITH DUMPLINGS SOUP::Soups, Sauces, and Gravies::79::4.58::4.51::4.93
+146::CHICKEN BROTH::Soups, Sauces, and Gravies::31::4.42::1.04::0.75
+147::CHICKEN SOUP::Soups, Sauces, and Gravies::71::5.06::2.64::6.88
+148::CHICKEN NOODLE SOUP::Soups, Sauces, and Gravies::48::2.37::1.55::6.07
+149::CHILI::Soups, Sauces, and Gravies::117::5.09::2.53::18.86
+150::CLAM CHOWDER::Soups, Sauces, and Gravies::56::3.02::1.41::7.84
+151::BEEF BROTH BOUILLON & CONSOMME::Soups, Sauces, and Gravies::11::2.52::0::0.32
+152::CRAB SOUP::Soups, Sauces, and Gravies::31::2.25::0.62::4.22
+153::ESCAROLE SOUP::Soups, Sauces, and Gravies::11::0.62::0.73::0.72
+154::LENTIL SOUP::Soups, Sauces, and Gravies::56::3.74::1.12::8.16
+155::ONION SOUP::Soups, Sauces, and Gravies::46::3.06::1.42::6.68
+156::OYSTER STEW::Soups, Sauces, and Gravies::48::1.72::3.13::3.32
+157::TOMATO SOUP::Soups, Sauces, and Gravies::93::1.64::2.12::17.08
+158::TERIYAKI SAUCE::Soups, Sauces, and Gravies::89::5.93::0.02::15.56
+159::GRAVY::Soups, Sauces, and Gravies::16::1.2::0.2::2.5
+160::SOFRITO SAUCE::Soups, Sauces, and Gravies::237::12.8::18.2::5.46
+161::BARBECUE SAUCE::Soups, Sauces, and Gravies::172::0.82::0.63::40.77
+162::PIZZA SAUCE::Soups, Sauces, and Gravies::54::2.18::1.15::8.66
+163::TOMATO BISQUE SOUP::Soups, Sauces, and Gravies::96::1.76::1.95::18.47
+164::SALSA::Soups, Sauces, and Gravies::29::1.54::0.17::6.72
+165::PREGO PASTA SAUCE::Soups, Sauces, and Gravies::69::1.54::2.31::10
+166::SWEET & SOUR SAUCE::Soups, Sauces, and Gravies::79::1.84::0.58::16.72
+167::RAMEN NOODLE SOUP::Soups, Sauces, and Gravies::440::10.17::17.59::60.26
+168::BROCCOLI CHEDDAR SOUP::Soups, Sauces, and Gravies::87::2.1::5.3::7.7
+169::BARBECUE LOAF::Sausages and Luncheon Meats::173::15.84::8.9::6.4
+170::BEERWURST::Sausages and Luncheon Meats::277::14::22.53::3.76
+171::BLOOD SAUSAGE::Sausages and Luncheon Meats::379::14.6::34.5::1.29
+172::BOCKWURST::Sausages and Luncheon Meats::301::14.03::25.87::2.95
+173::BOLOGNA::Sausages and Luncheon Meats::299::10.91::26.13::4.29
+174::CHORIZO::Sausages and Luncheon Meats::455::24.1::38.27::1.86
+175::CORNED BEEF LOAF::Sausages and Luncheon Meats::153::22.9::6.1::0
+176::FRANKFURTER::Sausages and Luncheon Meats::316::11.16::28.3::3.36
+177::HAM::Sausages and Luncheon Meats::239::16.06::18.83::0.26
+178::ITALIAN SAUSAGE::Sausages and Luncheon Meats::346::14.25::31.33::0.65
+179::KIELBASA::Sausages and Luncheon Meats::309::12.23::27.29::2.81
+180::KNACKWURST::Sausages and Luncheon Meats::307::11.1::27.7::3.2
+181::TURKEY BREAST DELI MEAT::Sausages and Luncheon Meats::116::21.81::0.83::3.51
+182::MORTADELLA::Sausages and Luncheon Meats::311::16.37::25.39::3.05
+183::OLIVE PORK LOAF::Sausages and Luncheon Meats::235::11.8::16.5::9.2
+184::POLISH SAUSAGE,PORK::Sausages and Luncheon Meats::326::14.1::28.72::1.63
+185::LUXURY LOAF,PORK::Sausages and Luncheon Meats::141::18.4::4.8::4.9
+186::SALAMI::Sausages and Luncheon Meats::261::12.6::22.2::1.9
+187::SLICED TURKEY BREAST::Sausages and Luncheon Meats::104::17.07::1.66::4.21
+188::TURKEY HAM::Sausages and Luncheon Meats::126::17.5::4.84::2.04
+189::ITALIAN TURKEY SAUSAGE::Sausages and Luncheon Meats::158::15.05::8.75::4.65
+190::BEERWURST::Sausages and Luncheon Meats::276::14::22.53::4.27
+191::CHICKEN BREAST  OVEN-ROASTED  FAT-FREE  SLICED::Sausages and Luncheon Meats::80::16.8::0.39::2.25
+192::CHICKEN BREAST  OVEN-ROASTED  FAT-FREE  SLICED::Sausages and Luncheon Meats::79::16.79::0.39::2.17
+193::POLISH KIELBASA::Sausages and Luncheon Meats::226::13.1::17.6::3.9
+194::OVEN-ROASTED CHICKEN BREAST ROLL::Sausages and Luncheon Meats::134::14.59::7.65::1.79
+195::BOLOGNA::Sausages and Luncheon Meats::211::13.06::16.06::3.45
+196::SMOKED HONEY HAM::Sausages and Luncheon Meats::122::17.93::2.37::7.27
+197::MACARONI & CHEESE LOAF::Sausages and Luncheon Meats::228::11.76::14.96::11.63
+198::TRUFFLE FLAVOR PATE::Sausages and Luncheon Meats::327::11.2::28.5::6.3
+199::ITALIAN MEATBALLS::Sausages and Luncheon Meats::286::14.4::22.21::8.06
+200::TURKEY BACON::Sausages and Luncheon Meats::368::29.5::25.87::4.24
+201::KELLOGG'S ALL-BRAN::Breakfast Cereals::260::13.14::4.9::74.24
+202::KELLOGG'S APPLE JACKS::Breakfast Cereals::375::5.1::3.4::88.2
+203::CAP'N CRUNCH::Breakfast Cereals::398::4.39::5.12::85.51
+204::CAP'N CRUNCH WITH CRUNCHBERRIES::Breakfast Cereals::397::4.45::4.83::85.93
+205::GENERAL MILLS CHEERIOS ::Breakfast Cereals::376::12.09::6.73::73.23
+206::KELLOGG'S COCOA KRISPIES::Breakfast Cereals::389::4.6::2.7::87.9
+207::COCOA PEBBLES::Breakfast Cereals::397::4.8::4.1::85.7
+208::GENERAL MILLS COOKIE CRISP::Breakfast Cereals::380::5.2::4.4::84.5
+209::QUAKER CRUNCHY BRAN::Breakfast Cereals::331::6.37::4.06::83.68
+210::GENERAL MILLS CORN CHEX::Breakfast Cereals::370::6.4::2.4::84.9
+211::KELLOGG'S CORN FLAKES::Breakfast Cereals::357::7.5::0.4::84.1
+212::KELLOGG'S CRACKLIN' OAT BRAN::Breakfast Cereals::395::9.2::14.1::70.3
+213::KELLOGG'S FRUIT LOOPS::Breakfast Cereals::375::5.3::3.4::88
+214::KELLOGG'S FROSTED MINI-WHEATS::Breakfast Cereals::350::9.2::1.6::83.4
+215::KELLOGG'S FROSTED RICE KRISPIES::Breakfast Cereals::384::4.3::0.4::91.3
+216::FRUITY PEBBLES::Breakfast Cereals::402::4.6::4::86.1
+217::GENERAL MILLS GOLDEN GRAHAMS::Breakfast Cereals::374::5.3::3.2::85.1
+218::HOMEMADE GRANOLA::Breakfast Cereals::489::14.85::24.06::53.25
+219::HONEYCOMB CEREAL::Breakfast Cereals::396::6::2.9::87.1
+220::GENERAL MILLS KIX::Breakfast Cereals::357::7.69::3.46::82.82
+221::GENERAL MILLS LUCKY CHARMS::Breakfast Cereals::380::7.67::5.02::80.89
+222::KELLOGG'S RICE KRISPIES::Breakfast Cereals::381::6.75::2.05::85.05
+223::KELLOGG'S CORN POPS::Breakfast Cereals::387::4.8::1.3::89.7
+224::KELLOGG'S FROSTED FLAKES::Breakfast Cereals::369::3.96::1.68::89.2
+225::GENERAL MILLS TRIX::Breakfast Cereals::383::5::4.1::85.6
+226::CEREALS RTE,SUN COUNTRY,KRETSCHMER HONEY CRUNCH WHEAT GERM::Breakfast Cereals::372::26.55::7.78::58.11
+227::CEREALS,CORN GRITS,WHITE,REG & QUICK,ENR,CKD W/ H2O,WO/ SALT::Breakfast Cereals::71::1.71::0.46::14.76
+228::CEREALS,QUAKER,CORN GRITS,INST,PLN,DRY::Breakfast Cereals::343::7.31::2.14::78.42
+229::INSTANT OATS::Breakfast Cereals::68::2.37::1.36::11.67
+230::QUAKER INSTANT OATMEAL MAPLE & BROWN SUGAR::Breakfast Cereals::368::9.2::4.63::76.91
+231::GENERAL MILLS REESE'S PUFFS::Breakfast Cereals::413::6.8::11.1::75.6
+232::QUAKER MULTIGRAIN OATMEAL::Breakfast Cereals::334::12.64::2.73::72.62
+233::GENERAL MILLS COCOA PUFFS::Breakfast Cereals::383::5.6::5.2::83.7
+234::GENERAL MILLS CINNAMON TOAST CRUNCH::Breakfast Cereals::411::5.45::10.25::77.99
+235::MILK & CEREAL BAR::Snacks::413::6.47::10.98::72.05
+236::RICE & WHEAT CEREAL BAR::Snacks::409::9.09::9.09::72.73
+237::KELLOGG'S CINNABON CEREAL::Breakfast Cereals::410::5.7::7.3::83.3
+238::KASHI INDIGO MORNING::Breakfast Cereals::364::7.7::3.4::82.8
+239::KASHI SIMPLY MAIZE::Breakfast Cereals::371::7.8::3.4::83.3
+240::KASHI GOLEAN CRISP CINN CRUMBLE::Breakfast Cereals::362::22.1::8.19::62.59
+241::APPLES::Fruits and Fruit Juices::52::0.26::0.17::13.81
+242::APPLE JUICE::Fruits and Fruit Juices::46::0.1::0.13::11.3
+243::APPLESAUCE ::Fruits and Fruit Juices::42::0.17::0.1::11.27
+244::APPLE SAUCE::Fruits and Fruit Juices::68::0.16::0.17::17.49
+245::APRICOTS::Fruits and Fruit Juices::48::1.4::0.39::11.12
+246::AVOCADO::Fruits and Fruit Juices::160::2::14.66::8.53
+247::BANANA::Fruits and Fruit Juices::89::1.09::0.33::22.84
+248::BLACKBERRIES::Fruits and Fruit Juices::43::1.39::0.49::9.61
+249::BLACKBERRY JUICE::Fruits and Fruit Juices::38::0.3::0.6::7.8
+250::TART CHERRIES::Fruits and Fruit Juices::333::1.25::0.73::80.45
+251::BLUEBERRIES::Fruits and Fruit Juices::57::0.74::0.33::14.49
+252::BOYSENBERRIES::Fruits and Fruit Juices::50::1.1::0.26::12.19
+253::BREADFRUIT::Fruits and Fruit Juices::103::1.07::0.23::27.12
+254::CARAMBOLA::Fruits and Fruit Juices::31::1.04::0.33::6.73
+255::CARISSA::Fruits and Fruit Juices::62::0.5::1.3::13.63
+256::CHERIMOYA::Fruits and Fruit Juices::75::1.57::0.68::17.71
+257::CHERRIES::Fruits and Fruit Juices::50::1::0.3::12.18
+258::CRABAPPLES::Fruits and Fruit Juices::76::0.4::0.3::19.95
+259::CRANBERRIES::Fruits and Fruit Juices::46::0.39::0.13::12.2
+260::CURRANTS::Fruits and Fruit Juices::63::1.4::0.41::15.38
+261::DATES::Fruits and Fruit Juices::282::2.45::0.39::75.03
+262::ELDERBERRIES::Fruits and Fruit Juices::73::0.66::0.5::18.4
+263::FIGS::Fruits and Fruit Juices::74::0.75::0.3::19.18
+264::FRUIT COCKTAIL::Fruits and Fruit Juices::32::0.42::0.05::8.51
+265::GOOSEBERRIES::Fruits and Fruit Juices::44::0.88::0.58::10.18
+266::GRAPEFRUIT::Fruits and Fruit Juices::32::0.63::0.1::8.08
+267::GRAPEFRUIT JUICE::Fruits and Fruit Juices::39::0.5::0.1::9.2
+268::GRAPES::Fruits and Fruit Juices::57::0.81::0.47::13.93
+269::GRAPE JUICE::Fruits and Fruit Juices::60::0.37::0.13::14.77
+270::GROUNDCHERRIES::Fruits and Fruit Juices::53::1.9::0.7::11.2
+271::GUAVAS::Fruits and Fruit Juices::68::2.55::0.95::14.32
+272::KIWIFRUIT::Fruits and Fruit Juices::61::1.14::0.52::14.66
+273::KUMQUATS::Fruits and Fruit Juices::71::1.88::0.86::15.9
+274::LEMONS::Fruits and Fruit Juices::29::1.1::0.3::9.32
+275::LEMON JUICE::Fruits and Fruit Juices::22::0.35::0.24::6.9
+276::LIMES::Fruits and Fruit Juices::30::0.7::0.2::10.54
+277::LIME JUICE::Fruits and Fruit Juices::25::0.42::0.07::8.42
+278::MANGOS::Fruits and Fruit Juices::60::0.82::0.38::14.98
+279::CANTALOUPE::Fruits and Fruit Juices::34::0.84::0.19::8.16
+280::CASABA::Fruits and Fruit Juices::28::1.11::0.1::6.58
+281::HONEYDEW::Fruits and Fruit Juices::36::0.54::0.14::9.09
+282::MULBERRIES::Fruits and Fruit Juices::43::1.44::0.39::9.8
+283::NECTARINES::Fruits and Fruit Juices::44::1.06::0.32::10.55
+284::OHELOBERRIES::Fruits and Fruit Juices::28::0.38::0.22::6.84
+285::OLIVES::Fruits and Fruit Juices::115::0.84::10.68::6.26
+286::ORANGES::Fruits and Fruit Juices::47::0.94::0.12::11.75
+287::ORANGE JUICE::Fruits and Fruit Juices::45::0.7::0.2::10.4
+288::TANGERINES::Fruits and Fruit Juices::53::0.81::0.31::13.34
+289::PAPAYAS::Fruits and Fruit Juices::43::0.47::0.26::10.82
+290::PASSIONFRUIT::Fruits and Fruit Juices::97::2.2::0.7::23.38
+291::PEACHES::Fruits and Fruit Juices::39::0.91::0.25::9.54
+292::PEARS::Fruits and Fruit Juices::57::0.36::0.14::15.23
+293::PERSIMMONS::Fruits and Fruit Juices::70::0.58::0.19::18.59
+294::PINEAPPLE::Fruits and Fruit Juices::50::0.54::0.12::13.12
+295::PLUMS::Fruits and Fruit Juices::46::0.7::0.28::11.42
+296::POMEGRANATES::Fruits and Fruit Juices::83::1.67::1.17::18.7
+297::PRICKLY PEARS::Fruits and Fruit Juices::41::0.73::0.51::9.57
+298::RASPBERRIES::Fruits and Fruit Juices::52::1.2::0.65::11.94
+299::STRAWBERRIES::Fruits and Fruit Juices::32::0.67::0.3::7.68
+300::WATERMELON::Fruits and Fruit Juices::30::0.61::0.15::7.55
+301::POMEGRANATE JUICE::Fruits and Fruit Juices::54::0.15::0.29::13.13
+302::PORK BELLY::Pork Products::518::9.34::53.01::0
+303::PORK LEG::Pork Products::245::17.43::18.87::0
+304::PORK LOIN::Pork Products::198::19.74::12.58::0
+305::PORK SHOULDER::Pork Products::236::17.18::17.99::0
+306::PORK SPARE RIBS::Pork Products::277::15.47::23.4::0
+307::PORK CHITTERLINGS::Pork Products::233::12.49::20.32::0
+308::PORK EARS::Pork Products::234::22.45::15.1::0.6
+309::PORK FEET::Pork Products::212::23.16::12.59::0
+310::PORK HEART::Pork Products::118::17.27::4.36::1.33
+311::PORK JOWL::Pork Products::655::6.38::69.61::0
+312::PORK KIDNEYS::Pork Products::100::16.46::3.25::0
+313::PORK LIVER::Pork Products::134::21.39::3.65::2.47
+314::PORK LUNGS::Pork Products::85::14.08::2.72::0
+315::PORK TONGUE::Pork Products::225::16.3::17.2::0
+316::PORK BACON::Pork Products::417::12.62::39.69::1.28
+317::CANADIAN BACON::Pork Products::111::20.24::2.76::1.29
+318::PORK HAM::Pork Products::120::18.49::4.56::0
+319::PORK SIRLOIN::Pork Products::171::28.41::5.47::0
+320::GROUND PORK::Pork Products::265::23.55::18.19::0
+321::PORK COUNTRY-STYLE RIBS::Pork Products::219::29.2::11.38::0
+322::ALFALFA SEEDS::Vegetables and Vegetable Products::23::3.99::0.69::2.1
+323::AMARANTH LEAVES::Vegetables and Vegetable Products::23::2.46::0.33::4.02
+324::ARROWHEAD::Vegetables and Vegetable Products::99::5.33::0.29::20.23
+325::ARTICHOKES::Vegetables and Vegetable Products::47::3.27::0.15::10.51
+326::ASPARAGUS::Vegetables and Vegetable Products::20::2.2::0.12::3.88
+327::BALSAM PEAR::Vegetables and Vegetable Products::30::5.3::0.69::3.29
+328::BAMBOO SHOOTS::Vegetables and Vegetable Products::27::2.6::0.3::5.2
+329::KIDNEY BEANS::Vegetables and Vegetable Products::29::4.2::0.5::4.1
+330::LIMA BEANS::Vegetables and Vegetable Products::113::6.84::0.86::20.17
+331::MUNG BEANS::Vegetables and Vegetable Products::30::3.04::0.18::5.94
+332::NAVY BEANS::Vegetables and Vegetable Products::67::6.15::0.7::13.05
+333::PINTO BEANS::Vegetables and Vegetable Products::170::9.8::0.5::32.5
+334::SHELLIE BEANS::Vegetables and Vegetable Products::30::1.76::0.19::6.19
+335::SNAP BEANS::Vegetables and Vegetable Products::31::1.83::0.22::6.97
+336::BEETS::Vegetables and Vegetable Products::43::1.61::0.17::9.56
+337::BROADBEANS::Vegetables and Vegetable Products::72::5.6::0.6::11.7
+338::BROCCOLI::Vegetables and Vegetable Products::34::2.82::0.37::6.64
+339::BRUSSELS SPROUTS::Vegetables and Vegetable Products::43::3.38::0.3::8.95
+340::BURDOCK ROOT::Vegetables and Vegetable Products::72::1.53::0.15::17.34
+341::BUTTERBUR::Vegetables and Vegetable Products::14::0.39::0.04::3.61
+342::CABBAGE::Vegetables and Vegetable Products::25::1.28::0.1::5.8
+343::CARDOON::Vegetables and Vegetable Products::17::0.7::0.1::4.07
+344::CARROTS::Vegetables and Vegetable Products::41::0.93::0.24::9.58
+345::CASSAVA::Vegetables and Vegetable Products::160::1.36::0.28::38.06
+346::CAULIFLOWER::Vegetables and Vegetable Products::25::1.92::0.28::4.97
+347::CELERIAC::Vegetables and Vegetable Products::42::1.5::0.3::9.2
+348::CELERY::Vegetables and Vegetable Products::16::0.69::0.17::2.97
+349::CELTUCE::Vegetables and Vegetable Products::18::0.85::0.3::3.65
+350::SWISS CHAR::Vegetables and Vegetable Products::19::1.8::0.2::3.74
+351::CHIVES::Vegetables and Vegetable Products::30::3.27::0.73::4.35
+352::COLLARDS::Vegetables and Vegetable Products::32::3.02::0.61::5.42
+353::CORIANDER LEAVES::Vegetables and Vegetable Products::23::2.13::0.52::3.67
+354::CORN::Vegetables and Vegetable Products::86::3.27::1.35::18.7
+355::COWPEAS::Vegetables and Vegetable Products::90::2.95::0.35::18.83
+356::YARDLONG BEAN::Vegetables and Vegetable Products::47::2.8::0.4::8.35
+357::CUCUMBER::Vegetables and Vegetable Products::15::0.65::0.11::3.63
+358::DANDELION GREENS::Vegetables and Vegetable Products::45::2.7::0.7::9.2
+359::EGGPLANT::Vegetables and Vegetable Products::25::0.98::0.18::5.88
+360::EDAMAME::Vegetables and Vegetable Products::110::10.25::4.73::8.58
+361::ENDIVE::Vegetables and Vegetable Products::17::1.25::0.2::3.35
+362::GARLIC::Vegetables and Vegetable Products::149::6.36::0.5::33.06
+363::GINGER ROOT::Vegetables and Vegetable Products::80::1.82::0.75::17.77
+364::GOURD::Vegetables and Vegetable Products::14::0.62::0.02::3.39
+365::KALE::Vegetables and Vegetable Products::49::4.28::0.93::8.75
+366::SHIITAKE MUSHROOMS::Vegetables and Vegetable Products::34::2.24::0.49::6.79
+367::CHANTERELLE MUSHROOMS::Vegetables and Vegetable Products::38::1.49::0.53::6.86
+368::MOREL MUSHROOMS::Vegetables and Vegetable Products::31::3.12::0.57::5.1
+369::KOHLRABI::Vegetables and Vegetable Products::27::1.7::0.1::6.2
+370::PORTABELLA MUSHROOMS::Vegetables and Vegetable Products::29::3.28::0.58::4.44
+371::LAMBSQUARTERS::Vegetables and Vegetable Products::43::4.2::0.8::7.3
+372::LENTILS::Vegetables and Vegetable Products::106::8.96::0.55::22.14
+373::BUTTERHEAD LETTUCE::Vegetables and Vegetable Products::13::1.35::0.22::2.23
+374::ROMAINE LETTUCE::Vegetables and Vegetable Products::17::1.23::0.3::3.29
+375::ICEBERG LETTUCE::Vegetables and Vegetable Products::14::0.9::0.14::2.97
+376::GREEN LEAF LETTUCE::Vegetables and Vegetable Products::15::1.36::0.15::2.87
+377::LOTUS ROOT::Vegetables and Vegetable Products::74::2.6::0.1::17.23
+378::WHITE MUSHROOMS::Vegetables and Vegetable Products::22::3.09::0.34::3.26
+379::MUSTARD GREENS::Vegetables and Vegetable Products::27::2.86::0.42::4.67
+380::NEW ZEALAND SPINACH::Vegetables and Vegetable Products::14::1.5::0.2::2.5
+381::OKRA::Vegetables and Vegetable Products::33::1.93::0.19::7.45
+382::ONIONS::Vegetables and Vegetable Products::40::1.1::0.1::9.34
+383::PARSLEY::Vegetables and Vegetable Products::36::2.97::0.79::6.33
+384::PARSNIPS::Vegetables and Vegetable Products::75::1.2::0.3::17.99
+385::GREEN PEAS::Vegetables and Vegetable Products::81::5.42::0.4::14.45
+386::HOT CHILI PEPPERS::Vegetables and Vegetable Products::21::0.9::0.1::5.1
+387::SWEET GREEN PEPPERS::Vegetables and Vegetable Products::20::0.86::0.17::4.64
+388::POKEBERRY SHOOTS::Vegetables and Vegetable Products::23::2.6::0.4::3.7
+389::POTATOES::Vegetables and Vegetable Products::77::2.02::0.09::17.47
+390::RUSSET POTATOES::Vegetables and Vegetable Products::79::2.14::0.08::18.07
+391::RED POTATOES::Vegetables and Vegetable Products::70::1.89::0.14::15.9
+392::SCALLOPED POTATOES::Vegetables and Vegetable Products::88::2.87::3.68::10.78
+393::POTATO FLOUR::Vegetables and Vegetable Products::357::6.9::0.34::83.1
+394::POTATO SALAD::Vegetables and Vegetable Products::143::2.68::8.2::11.17
+395::PUMPKIN FLOWERS::Vegetables and Vegetable Products::15::1.03::0.07::3.28
+396::PUMPKIN LEAVES::Vegetables and Vegetable Products::19::3.15::0.4::2.33
+397::PUMPKIN::Vegetables and Vegetable Products::26::1::0.1::6.5
+398::PUMPKIN PIE MIX::Vegetables and Vegetable Products::104::1.09::0.13::26.39
+399::PURSLANE::Vegetables and Vegetable Products::20::2.03::0.36::3.39
+400::RADISHES::Vegetables and Vegetable Products::16::0.68::0.1::3.4
+401::RUTABAGAS::Vegetables and Vegetable Products::37::1.08::0.16::8.62
+402::SAUERKRAUT::Vegetables and Vegetable Products::19::0.91::0.14::4.28
+403::SEAWEED::Vegetables and Vegetable Products::26::0.54::0.03::6.75
+404::SESBANIA FLOWER::Vegetables and Vegetable Products::27::1.28::0.04::6.73
+405::GREEN SOYBEANS::Vegetables and Vegetable Products::147::12.95::6.8::11.05
+406::SPINACH::Vegetables and Vegetable Products::23::2.86::0.39::3.63
+407::SQUASH::Vegetables and Vegetable Products::19::1.01::0.27::3.88
+408::SUCCOTASH::Vegetables and Vegetable Products::99::5.03::1.02::19.59
+409::SWEET POTATO::Vegetables and Vegetable Products::86::1.57::0.05::20.12
+410::TARO::Vegetables and Vegetable Products::112::1.5::0.2::26.46
+411::TOMATOES::Vegetables and Vegetable Products::18::0.88::0.2::3.89
+412::TOMATO JUICE::Vegetables and Vegetable Products::17::0.85::0.29::3.53
+413::TURNIPS::Vegetables and Vegetable Products::28::0.9::0.1::6.43
+414::YAM::Vegetables and Vegetable Products::118::1.53::0.17::27.88
+415::DOCK::Vegetables and Vegetable Products::22::2::0.7::3.2
+416::JALAPENO PEPPERS::Vegetables and Vegetable Products::27::0.92::0.94::4.74
+417::CHIA SEEDS::Nut and Seed Products::486::16.54::30.74::42.12
+418::COTTONSEED::Nut and Seed Products::359::40.96::6.2::40.54
+419::LOTUS SEEDS::Nut and Seed Products::332::15.41::1.97::64.47
+420::PUMPKIN & SQUASH KERNELS::Nut and Seed Products::559::30.23::49.05::10.71
+421::SAFFLOWER KERNELS::Nut and Seed Products::517::16.18::38.45::34.29
+422::SESAME SEEDS::Nut and Seed Products::573::17.73::49.67::23.45
+423::SUNFLOWER SEEDS::Nut and Seed Products::584::20.78::51.46::20
+424::ACORNS::Nut and Seed Products::387::6.15::23.86::40.75
+425::ACORN FLOUR::Nut and Seed Products::501::7.49::30.17::54.65
+426::ALMONDS::Nut and Seed Products::579::21.15::49.93::21.55
+427::BEECHNUTS::Nut and Seed Products::576::6.2::50::33.5
+428::BRAZILNUTS::Nut and Seed Products::659::14.32::67.1::11.74
+429::BUTTERNUTS::Nut and Seed Products::612::24.9::56.98::12.05
+430::CASHEW NUTS::Nut and Seed Products::574::15.31::46.35::32.69
+431::CHESTNUTS::Nut and Seed Products::224::4.2::1.11::49.07
+432::COCONUT MEAT::Nut and Seed Products::354::3.33::33.49::15.23
+433::COCONUT::Nut and Seed Products::357::1.17::16.31::53.21
+434::COCONUT MILK::Nut and Seed Products::230::2.29::23.84::5.54
+435::HAZELNUTS::Nut and Seed Products::628::14.95::60.75::16.7
+436::GINKGO NUTS::Nut and Seed Products::182::4.32::1.68::37.6
+437::HICKORYNUTS::Nut and Seed Products::657::12.72::64.37::18.25
+438::MACADAMIA NUTS::Nut and Seed Products::718::7.91::75.77::13.82
+439::MIXED NUTS::Nut and Seed Products::594::17.3::51.45::25.35
+440::PECANS::Nut and Seed Products::691::9.17::71.97::13.86
+441::PILINUTS::Nut and Seed Products::719::10.8::79.55::3.98
+442::PINE NUTS::Nut and Seed Products::673::13.69::68.37::13.08
+443::PISTACHIO NUTS::Nut and Seed Products::562::20.27::45.39::27.51
+444::WALNUTS::Nut and Seed Products::619::24.06::59.33::9.58
+445::BREADFRUIT SEEDS::Nut and Seed Products::207::6.2::2.7::40.1
+446::SESAME BUTTER::Nut and Seed Products::595::17::53.76::21.19
+447::WATERMELON SEEDS::Nut and Seed Products::557::28.33::47.37::15.31
+448::FLAXSEED::Nut and Seed Products::534::18.29::42.16::28.88
+449::BEEF STRIP STEAKS::Beef Products::117::23.07::2.69::0
+450::BEEF CARCASS::Beef Products::291::17.32::24.05::0
+451::BEEF BRISKET::Beef Products::155::20.72::7.37::0
+452::GROUND BEEF::Beef Products::192::19.42::12.73::0
+453::FLANK STEAK::Beef Products::165::21.22::8.29::0
+454::RIB EYE STEAK::Beef Products::274::17.51::22.07::0
+455::FULL CUT STEAK::Beef Products::191::29.21::7.31::0
+456::SHANK CROSSCUTS::Beef Products::128::21.75::3.85::0
+457::BEEF POT ROAST::Beef Products::216::30.54::10.46::0
+458::BEEF PATTIES::Beef Products::295::23.05::21.83::0
+459::BEEF LIVER::Beef Products::135::20.36::3.63::3.89
+460::BEEF TONGUE::Beef Products::224::14.9::16.09::3.68
+461::BEEF TRIPE::Beef Products::85::12.07::3.69::0
+462::CORNED BEEF::Sausages and Luncheon Meats::250::27.1::14.93::0
+463::UNDER BLADE CENTER STEAK::Beef Products::220::26.5::12.64::0.14
+464::BEEF PASTRAMI::Sausages and Luncheon Meats::147::21.8::5.82::0.36
+465::CURED BEEF SAUSAGE::Sausages and Luncheon Meats::312::14.11::26.91::2.42
+466::SMOKED BEEF::Sausages and Luncheon Meats::133::20.19::4.42::1.86
+467::BEEF RIBS::Beef Products::372::22.8::30.49::0
+468::BEEF TENDERLOIN STEAK::Beef Products::217::30.21::9.71::0
+469::BEEF SIRLOIN::Beef Products::212::29.33::9.67::0
+470::T-BONE STEAK::Beef Products::258::24.05::17.26::0
+471::SKIRT STEAK::Beef Products::233::24.18::14.37::0
+472::BEEF SHORT RIBS::Beef Products::250::28.84::14.95::0
+473::BUDWEISER::Beverages::41::0.36::0::2.97
+474::DAIQUIRI::Beverages::125::0::0::15.7
+475::MICHELOB ULTRA::Beverages::27::0.17::0::0.73
+476::PINA COLADA::Beverages::237::0.6::7.6::27.6
+477::ALMOND MILK::Beverages::38::0.42::1.04::6.59
+478::TEQUILA SUNRISE::Beverages::110::0.3::0.1::11.3
+479::MONSTER ENERGY DRINK::Beverages::5::0::0::1.38
+480::WHISKEY SOUR MIX::Beverages::383::0.6::0.1::97.3
+481::CREME DE MENTHE::Beverages::371::0::0.3::41.6
+482::MUSCLE MILK::Beverages::49::5.87::2.01::2.06
+483::OCEAN SPRAY CRANBERRY JUICE::Beverages::15::0::0::3.75
+484::RUM::Beverages::231::0::0::0
+485::WHISKEY::Beverages::250::0::0::0.1
+486::CHOCOLATE ALMOND MILK::Beverages::50::0.63::1.25::9.38
+487::GREEN TEA::Beverages::1::0.18::0::0
+488::MOUNTAIN DEW::Beverages::17::0::0::4.23
+489::PEACH MANGO SMOOTHIE::Beverages::37::1.22::0::7.76
+490::V8 SPLASH STRAWBERRY BANANA SMOOTHIE::Beverages::37::1.22::0::8.16
+491::V8 SPLASH TROPICAL COLADA SMOOTHIE::Beverages::41::1.22::0::8.54
+492::RED TABLE WINE::Beverages::85::0.07::0::2.61
+493::CABERNET SAUVIGNON::Beverages::83::0.07::0::2.6
+494::PINOT NOIR::Beverages::82::0.07::0::2.31
+495::SYRAH::Beverages::83::0.07::0::2.58
+496::BARBERA::Beverages::85::0.07::0::2.79
+497::ZINFANDEL::Beverages::88::0.07::0::2.86
+498::PETITE SIRAH::Beverages::85::0.07::0::2.68
+499::CLARET::Beverages::83::0.07::0::3.01
+500::WHITE TABLE WINE::Beverages::82::0.07::0::2.6
+501::LEMBERGER::Beverages::80::0.07::0::2.46
+502::SANGIOVESE::Beverages::86::0.07::0::2.62
+503::CARIGNANE::Beverages::74::0.07::0::2.4
+504::PINOT GRIS::Beverages::83::0.07::0::2.06
+505::CHENIN BLANC::Beverages::80::0.07::0::3.31
+506::FUME BLANC::Beverages::82::0.07::0::2.27
+507::MULLER THURGAU::Beverages::76::0.07::0::3.48
+508::CLUB SODA::Beverages::0::0::0::0
+509::GEWURZTRAMINER::Beverages::81::0.07::0::2.6
+510::SEMILLON::Beverages::82::0.07::0::3.12
+511::CREAM SODA::Beverages::51::0::0::13.3
+512::SPRITE::Beverages::40::0.05::0.02::10.14
+513::COLA::Beverages::41::0::0::10.58
+514::ORANGE SODA::Beverages::48::0::0::12.3
+515::RED BULL::Beverages::45::0.25::0.08::10.94
+516::TONIC::Beverages::34::0::0::8.8
+517::ROOT BEER::Beverages::41::0::0::10.6
+518::CHOCOLATE SYRUP::Beverages::279::2.1::1.13::65.1
+519::COCOA MIX::Beverages::398::6.67::4::83.73
+520::BREWED ESPRESSO::Beverages::9::0.1::0.18::1.69
+521::INSTANT COFFEE::Beverages::352::14.42::0.5::73.18
+522::MOCHA::Beverages::440::9::13.21::71.4
+523::CRANBERRY APPLE JUICE::Beverages::63::0::0.11::15.85
+524::FRUIT PUNCH::Beverages::47::0::0::11.94
+525::GRAPE JUICE::Beverages::57::0::0::14.55
+526::LEMONADE POWDER::Beverages::376::0::1.05::97.57
+527::LEMONADE::Beverages::14::0::0.04::3.59
+528::INSTANT TEA::Beverages::315::20.21::0::58.66
+529::BLACK TEA::Beverages::1::0::0::0.3
+530::WATER::Beverages::0::0::0::0
+531::ARIZONA ICED TEA::Beverages::39::0::0::9.77
+532::LIPTON ICED TEA::Beverages::35::0::0::8.81
+533::HIBISCUS TEA::Beverages::37::0.43::0.65::7.41
+534::ANCHOVY,EUROPEAN,RAW::Finfish and Shellfish Products::131::20.35::4.84::0
+535::STRIPED BASS::Finfish and Shellfish Products::114::18.86::3.69::0
+536::BLUEFISH::Finfish and Shellfish Products::124::20.04::4.24::0
+537::BURBOT::Finfish and Shellfish Products::90::19.31::0.81::0
+538::BUTTERFISH::Finfish and Shellfish Products::146::17.28::8.02::0
+539::CARP::Finfish and Shellfish Products::127::17.83::5.6::0
+540::CATFISH::Finfish and Shellfish Products::95::16.38::2.82::0
+541::CAVIAR::Finfish and Shellfish Products::264::24.6::17.9::4
+542::CISCO::Finfish and Shellfish Products::98::18.99::1.91::0
+543::ATLANTIC COD::Finfish and Shellfish Products::82::17.81::0.67::0
+544::PACIFIC COD::Finfish and Shellfish Products::69::15.27::0.41::0
+545::ATLANTIC CROAKER::Finfish and Shellfish Products::104::17.78::3.17::0
+546::CUSK::Finfish and Shellfish Products::87::18.99::0.69::0
+547::DOLPHINFISH::Finfish and Shellfish Products::85::18.5::0.7::0
+548::FRESHWATER DRUM::Finfish and Shellfish Products::119::17.54::4.93::0
+549::EEL::Finfish and Shellfish Products::184::18.44::11.66::0
+550::FLATFISH::Finfish and Shellfish Products::70::12.41::1.93::0
+551::HADDOCK::Finfish and Shellfish Products::74::16.32::0.45::0
+552::HALIBUT::Finfish and Shellfish Products::91::18.56::1.33::0
+553::ATLANTIC HERRING::Finfish and Shellfish Products::158::17.96::9.04::0
+554::LING::Finfish and Shellfish Products::87::18.99::0.64::0
+555::LINGCOD::Finfish and Shellfish Products::85::17.66::1.06::0
+556::ATLANTIC MACKEREL::Finfish and Shellfish Products::205::18.6::13.89::0
+557::KING MACKEREL::Finfish and Shellfish Products::105::20.28::2::0
+558::SPANISH MACKEREL::Finfish and Shellfish Products::139::19.29::6.3::0
+559::MILKFISH::Finfish and Shellfish Products::148::20.53::6.73::0
+560::MONKFISH::Finfish and Shellfish Products::76::14.48::1.52::0
+561::MULLET::Finfish and Shellfish Products::117::19.35::3.79::0
+562::OCEAN PERCH::Finfish and Shellfish Products::79::15.31::1.54::0
+563::POUT::Finfish and Shellfish Products::79::16.64::0.91::0
+564::NORTHERN PIKE::Finfish and Shellfish Products::88::19.26::0.69::0
+565::WALLEYE::Finfish and Shellfish Products::93::19.14::1.22::0
+566::ATLANTIC POLLOCK::Finfish and Shellfish Products::92::19.44::0.98::0
+567::ALASKA POLLOCK::Finfish and Shellfish Products::56::12.19::0.41::0
+568::FLORIDA POMPANO::Finfish and Shellfish Products::164::18.48::9.47::0
+569::PACIFIC ROCKFISH::Finfish and Shellfish Products::90::18.36::1.34::0
+570::ORANGE ROUGHY::Finfish and Shellfish Products::76::16.41::0.7::0
+571::SABLEFISH::Finfish and Shellfish Products::195::13.41::15.3::0
+572::ATLANTIC SALMON::Finfish and Shellfish Products::142::19.84::6.34::0
+573::PINK SALMON::Finfish and Shellfish Products::127::20.5::4.4::0
+574::SOCKEYE SALMON::Finfish and Shellfish Products::142::21.31::5.61::0
+575::SARDINE::Finfish and Shellfish Products::208::24.62::11.45::0
+576::SCUP::Finfish and Shellfish Products::105::18.88::2.73::0
+577::SEA BASS::Finfish and Shellfish Products::97::18.43::2::0
+578::SEATROUT::Finfish and Shellfish Products::104::16.74::3.61::0
+579::AMERICAN SHAD::Finfish and Shellfish Products::197::16.93::13.77::0
+580::SHARK ::Finfish and Shellfish Products::130::20.98::4.51::0
+581::SHEEPSHEAD::Finfish and Shellfish Products::108::20.21::2.41::0
+582::RAINBOW SMELT::Finfish and Shellfish Products::97::17.63::2.42::0
+583::SNAPPER ::Finfish and Shellfish Products::100::20.51::1.34::0
+584::SPOT ::Finfish and Shellfish Products::123::18.51::4.9::0
+585::STURGEON ::Finfish and Shellfish Products::105::16.14::4.04::0
+586::WHITE SUCKER::Finfish and Shellfish Products::92::16.76::2.32::0
+587::PUMPKIN SEED SUNFISH::Finfish and Shellfish Products::89::19.4::0.7::0
+588::SURIMI::Finfish and Shellfish Products::99::15.18::0.9::6.85
+589::SWORDFISH::Finfish and Shellfish Products::144::19.66::6.65::0
+590::TILEFISH::Finfish and Shellfish Products::96::17.5::2.31::0
+591::TROUT::Finfish and Shellfish Products::148::20.77::6.61::0
+592::TUNA::Finfish and Shellfish Products::144::23.33::4.9::0
+593::TURBOT::Finfish and Shellfish Products::95::16.05::2.95::0
+594::YELLOWTAIL::Finfish and Shellfish Products::146::23.14::5.24::0
+595::ALASKA KING CRAB::Finfish and Shellfish Products::84::18.29::0.6::0
+596::BLUE CRAB::Finfish and Shellfish Products::87::18.06::1.08::0.04
+597::LOBSTER ::Finfish and Shellfish Products::77::16.52::0.75::0
+598::SHRIMP ::Finfish and Shellfish Products::71::13.61::1.01::0.91
+599::ABALONE::Finfish and Shellfish Products::105::17.1::0.76::6.01
+600::CLAM::Finfish and Shellfish Products::86::14.67::0.96::3.57
+601::MUSSEL::Finfish and Shellfish Products::86::11.9::2.24::3.69
+602::OCTOPUS::Finfish and Shellfish Products::82::14.91::1.04::2.2
+603::OYSTER::Finfish and Shellfish Products::51::5.71::1.71::2.72
+604::SCALLOP::Finfish and Shellfish Products::69::12.06::0.49::3.18
+605::WHELK::Finfish and Shellfish Products::137::23.84::0.4::7.76
+606::DOLPHINFISH::Finfish and Shellfish Products::109::23.72::0.9::0
+607::TILAPIA::Finfish and Shellfish Products::96::20.08::1.7::0
+608::ADZUKI BEANS::Legumes and Legume Products::329::19.87::0.53::62.9
+609::BAKED BEANS::Legumes and Legume Products::155::5.54::5.15::21.63
+610::BLACK BEANS::Legumes and Legume Products::341::21.6::1.42::62.36
+611::CRANBERRY BEANS::Legumes and Legume Products::335::23.03::1.23::60.05
+612::FRENCH BEANS::Legumes and Legume Products::343::18.81::2.02::64.11
+613::GREAT NORTHERN BEANS::Legumes and Legume Products::339::21.86::1.14::62.37
+614::KIDNEY BEANS::Legumes and Legume Products::333::23.58::0.83::60.01
+615::NAVY BEANS::Legumes and Legume Products::337::22.33::1.5::60.75
+616::PINK BEANS::Legumes and Legume Products::343::20.96::1.13::64.19
+617::PINTO BEANS::Legumes and Legume Products::347::21.42::1.23::62.55
+618::WHITE BEANS::Legumes and Legume Products::333::23.36::0.85::60.27
+619::BROADBEANS::Legumes and Legume Products::341::26.12::1.53::58.29
+620::CAROB FLOUR::Legumes and Legume Products::222::4.62::0.65::88.88
+621::CHICKPEAS::Legumes and Legume Products::378::20.47::6.04::62.95
+622::CHILI WITH BEANS::Legumes and Legume Products::112::5.71::5.49::11.91
+623::HYACINTH BEANS::Legumes and Legume Products::344::23.9::1.69::60.74
+624::LENTILS::Legumes and Legume Products::352::24.63::1.06::63.35
+625::LUPINS ::Legumes and Legume Products::371::36.17::9.74::40.37
+626::MOTHBEANS::Legumes and Legume Products::343::22.94::1.61::61.52
+627::GREEN PEAS::Legumes and Legume Products::352::23.82::1.16::63.74
+628::SPLIT PEAS::Legumes and Legume Products::118::8.34::0.39::21.1
+629::PEANUTS::Legumes and Legume Products::567::25.8::49.24::16.13
+630::PEANUR BUTTER::Legumes and Legume Products::589::24.06::49.94::21.57
+631::PEANUT FLOUR::Legumes and Legume Products::428::33.8::21.9::31.27
+632::PIGEON PEAS::Legumes and Legume Products::343::21.7::1.49::62.78
+633::SOYBEANS::Legumes and Legume Products::173::16.64::8.97::9.93
+634::MISO::Legumes and Legume Products::199::11.69::6.01::26.47
+635::NATTO::Legumes and Legume Products::212::17.72::11::14.36
+636::TEMPEH::Legumes and Legume Products::193::18.54::10.8::9.39
+637::SOY FLOUR::Legumes and Legume Products::436::34.54::20.65::35.19
+638::SOYMILK::Legumes and Legume Products::54::3.27::1.75::6.28
+639::TOFU::Legumes and Legume Products::61::6.55::3.69::1.8
+640::OKARA::Legumes and Legume Products::77::3.22::1.73::12.54
+641::YARDLONG BEANS::Legumes and Legume Products::347::24.33::1.31::61.91
+642::WINGED BEANS::Legumes and Legume Products::409::29.65::16.32::41.71
+643::HUMMUS ::Legumes and Legume Products::177::4.86::8.59::20.12
+644::FALAFEL::Legumes and Legume Products::333::13.31::17.8::31.84
+645::VEGGIE BURGERS::Legumes and Legume Products::177::15.7::6.3::14.27
+646::LOMA LINDA LITTLE LINKS::Legumes and Legume Products::221::19.4::13.5::5.5
+647::WORTHINGTON CHILI::Legumes and Legume Products::126::10.4::4.5::10.9
+648::WORTHINGTON CHOPLETS::Legumes and Legume Products::103::19.4::1::4.1
+649::MORNINGSTAR FARMS BREAKFAST PATTIE::Legumes and Legume Products::220::23.7::8.3::12.6
+650::MORNINGSTAR FARMS BREAKFAST BACON STRIPS::Legumes and Legume Products::346::12.4::26.6::14.3
+651::AUSTRALIAN VEAL RIB::Lamb, Veal, and Game Products::134::21.7::4.63::1.4
+652::LAMB FORESHANK::Lamb, Veal, and Game Products::201::18.91::13.38::0
+653::LAMB LEG::Lamb, Veal, and Game Products::258::25.55::16.48::0
+654::LAMB LEG SIRLOIN::Lamb, Veal, and Game Products::292::24.63::20.67::0
+655::LAMB LOIN::Lamb, Veal, and Game Products::310::16.32::26.63::0
+656::LAMB SHOULDER::Lamb, Veal, and Game Products::264::16.58::21.45::0
+657::LAMB CUBED FOR STEW OR KABOB ::Lamb, Veal, and Game Products::134::20.21::5.28::0
+658::VEAL MIXED CUTS::Lamb, Veal, and Game Products::231::30.1::11.39::0
+659::VEAL LEG CUTS::Lamb, Veal, and Game Products::117::20.98::3.08::0
+660::VEAL LOIN CUTS::Lamb, Veal, and Game Products::177::20.07::10.07::0.07
+661::VEAL RIB::Lamb, Veal, and Game Products::162::18.86::9.01::0
+662::VEAL SHOULDER CUTS::Lamb, Veal, and Game Products::130::19.27::5.28::0
+663::VEAL SIRLOIN CUTS::Lamb, Veal, and Game Products::152::19.07::7.81::0
+664::VEAL CUBED FOR STEW::Lamb, Veal, and Game Products::109::20.27::2.5::0
+665::GROUND VEAL::Lamb, Veal, and Game Products::197::18.58::13.06::0
+666::ANTELOPE MEAT::Lamb, Veal, and Game Products::114::22.38::2.03::0
+667::BEAR MEAT::Lamb, Veal, and Game Products::161::20.1::8.3::0
+668::GROUND BISON::Lamb, Veal, and Game Products::179::25.45::8.62::0
+669::BEAVER MEAT::Lamb, Veal, and Game Products::146::24.05::4.8::0
+670::BISON MEAT::Lamb, Veal, and Game Products::109::21.62::1.84::0
+671::BOAR MEAT::Lamb, Veal, and Game Products::122::21.51::3.33::0
+672::BUFFALO MEAT::Lamb, Veal, and Game Products::99::20.39::1.37::0
+673::CARIBOU MEAT::Lamb, Veal, and Game Products::127::22.63::3.36::0
+674::DEER MEAT::Lamb, Veal, and Game Products::120::22.96::2.42::0
+675::ELK MEAT::Lamb, Veal, and Game Products::111::22.95::1.45::0
+676::GOAT MEAT::Lamb, Veal, and Game Products::109::20.6::2.31::0
+677::HORSE MEAT::Lamb, Veal, and Game Products::133::21.39::4.6::0
+678::MOOSE MEAT::Lamb, Veal, and Game Products::102::22.24::0.74::0
+679::MUSKRAT MEAT::Lamb, Veal, and Game Products::162::20.76::8.1::0
+680::OPOSSUM MEAT::Lamb, Veal, and Game Products::221::30.2::10.2::0
+681::VEAL BREAST::Lamb, Veal, and Game Products::521::9.4::53.35::0
+682::VEAL SHANK CUTS::Lamb, Veal, and Game Products::191::31.54::6.2::0
+683::BAGEL::Baked Products::264::10.56::1.32::52.38
+684::EGG BAGEL::Baked Products::278::10.6::2.1::53
+685::CINAMMON RAISIN BAGEL::Baked Products::274::9.8::1.7::55.2
+686::BISCUIT::Baked Products::335::7.3::12.1::48.4
+687::BANANA BREAD::Baked Products::326::4.3::10.5::54.6
+688::BOSTON BROWN BREAD::Baked Products::195::5.2::1.5::43.3
+689::CORNBREAD::Baked Products::418::7::12.2::69.5
+690::CRACKED WHEAT BREAD::Baked Products::260::8.7::3.9::49.5
+691::EGG BREAD::Baked Products::287::9.5::6::47.8
+692::ITALIAN BREAD::Baked Products::271::8.8::3.5::50
+693::MULTIGRAIN BREAD::Baked Products::265::13.36::4.23::43.34
+694::OATMEAL BREAD::Baked Products::269::8.4::4.4::48.5
+695::PITA BREAD::Baked Products::275::9.1::1.2::55.7
+696::PUMPERNICKEL BREAD::Baked Products::250::8.7::3.1::47.5
+697::RAISIN BREAD::Baked Products::274::7.9::4.4::52.3
+698::RYE BREAD::Baked Products::259::8.5::3.3::48.3
+699::WHEAT BREAD::Baked Products::267::10.72::3.24::48.68
+700::WHITE BREAD::Baked Products::266::8.85::3.33::49.42
+701::WHOLE WHEAT BREAD::Baked Products::252::12.45::3.5::42.71
+702::BREAD CRUMBS::Baked Products::395::13.35::5.3::71.98
+703::BREAD STICKS::Baked Products::412::12::9.5::68.4
+704::BREAD STUFFING::Baked Products::386::11::3.4::76.2
+705::ANGELFOOD CAKE::Baked Products::258::5.9::0.8::57.8
+706::BOSTON CREAM PIE::Baked Products::252::2.4::8.5::42.9
+707::CARROT CAKE::Baked Products::415::5.1::9.8::79.2
+708::CHERRY FUDGE CAKE::Baked Products::264::2.4::12.5::38
+709::CHOCOLATE CAKE::Baked Products::389::3.48::20.05::52.84
+710::COFFEECAKE::Baked Products::339::7::15.2::44.3
+711::FRUITCAKE::Baked Products::324::2.9::9.1::61.6
+712::GINGERBREAD::Baked Products::437::4.4::13.8::74.6
+713::MARBLE DRY BREAD::Baked Products::416::3.4::11.7::79.5
+714::POUND CAKE::Baked Products::353::5::13.96::53.64
+715::SHORTCAKE::Baked Products::346::6.1::14.2::48.5
+716::SPONGE CAKE::Baked Products::290::5.4::2.7::61
+717::CHEESECAKE  ::Baked Products::321::5.5::22.5::25.5
+718::ANIMAL CRACKERS::Baked Products::446::6.9::13.8::74.1
+719::BROWNIES::Baked Products::405::4.8::16.3::63.9
+720::BUTTER COOKIES::Baked Products::467::6.1::18.8::68.9
+721::FUDGE COOKIES::Baked Products::349::5::3.7::78.3
+722::CHOCOLATE WAFERS::Baked Products::433::6.6::14.2::72.7
+723::CHOCOLATE CHIP COOKIES::Baked Products::451::5.97::17.91::67.49
+724::FIG BARS::Baked Products::348::3.7::7.3::70.9
+725::FORTUNE COOKIES::Baked Products::378::4.2::2.7::84
+726::GINGERSNAPS::Baked Products::416::5.6::9.8::76.9
+727::GRAHAM CRACKERS::Baked Products::430::6.69::10.6::77.66
+728::LADYFINGERS::Baked Products::365::10.6::9.1::59.7
+729::MARSHMALLOW COOKIES::Baked Products::421::4::16.9::67.7
+730::MOLASSES COOKIES::Baked Products::430::5.6::12.8::73.8
+731::OATMEAL COOKIES::Baked Products::450::6.2::18.1::68.7
+732::PEANUT BUTTER COOKIES::Baked Products::473::8.92::23.82::58.15
+733::RAISIN COOKIES::Baked Products::401::4.1::13.6::68
+734::SUGAR COOKIES::Baked Products::436::4::19.48::61.22
+735::PUFF PASTRY::Baked Products::558::7.4::38.5::45.7
+736::CHEESE CRACKERS::Baked Products::489::10.93::22.74::59.42
+737::MATZO CRACKERS::Baked Products::395::10::1.4::83.7
+738::RUSK TOAST CRACKERS::Baked Products::407::13.5::7.2::72.3
+739::SALTINES::Baked Products::418::9.46::8.64::74.05
+740::WHEAT CRACKERS::Baked Products::455::7.3::16.4::70.73
+741::CRACKER MEAL::Baked Products::383::9.3::1.7::80.9
+742::CREAM PUFF SHELL::Baked Products::362::9::25.9::22.8
+743::BUTTER CROISSANTS::Baked Products::406::8.2::21::45.8
+744::APPLE CROISSANTS::Baked Products::254::7.4::8.7::37.1
+745::CHEESE CROISSANTS::Baked Products::414::9.2::20.9::47
+746::PLAIN CROUTONS::Baked Products::407::11.9::6.6::73.5
+747::GLAZED DOUGHNUTS::Baked Products::426::5.2::22.9::50.8
+748::FRENCH CRULLERS DOUGHNUTS::Baked Products::412::3.1::18.3::59.5
+749::ENGLISH MUFFIN::Baked Products::227::8.87::1.69::44.17
+750::FRENCH TOAST::Baked Products::213::7.4::6.1::32.1
+751::HUSH PUPPIES::Baked Products::337::7.7::13.5::46
+752::ICE CREAM CONES::Baked Products::417::8.1::6.9::79
+753::PLAIN MUFFINS::Baked Products::296::6.9::11.4::41.4
+754::BLUEBERRY MUFFINS::Baked Products::375::4.49::16.07::53
+755::CORN MUFFINS::Baked Products::305::5.9::8.4::51
+756::OAT BRAN MUFFINS::Baked Products::270::7::7.4::48.3
+757::PLAIN PANCAKEs::Baked Products::233::5.23::6.83::37.75
+758::BLUEBERRY PANCAKES::Baked Products::222::6.1::9.2::29
+759::BUCKWHEAT PANCAKES::Baked Products::340::10.9::2.7::71.3
+760::APPLE PIE::Baked Products::237::1.9::11::34
+761::BANANA CREAM PIE::Baked Products::251::3.4::12.9::31.6
+762::BLUEBERRY PIE::Baked Products::232::1.8::10::34.9
+763::DINNER ROLLS::Baked Products::310::10.86::6.47::52.04
+764::FRENCH ROLLS::Baked Products::277::8.6::4.3::50.2
+765::HAMBURGER BUNS::Baked Products::278::9.87::3.76::50.15
+766::APPLE STRUDEL::Baked Products::274::3.3::11.2::41.1
+767::TACO SHELLS::Baked Products::476::6.41::21.79::63.49
+768::WAFFLES::Baked Products::285::6.47::9.7::42.98
+769::LEAVENING AGENTS::Baked Products::53::0::0::27.7
+770::BEEF JERKY::Snacks::410::33.2::25.6::11
+771::CORNNUTS::Snacks::446::8.5::15.64::71.86
+772::CRISPED RICE BAR,CHOC CHIP::Snacks::404::5.1::13.5::73
+773::FRUIT LEATHER PIECES::Sweets::359::1::2.68::82.82
+774::FRUIT LEATHER ROLLS::Sweets::371::0.1::3::85.8
+775::GRANOLA BARS,HARD,PLAIN::Snacks::471::10.1::19.8::64.4
+776::HARD ALMOND GRANOLA BARS::Snacks::495::7.7::25.5::62
+777::HARD CHOCOLATE CHIP GRANOLA BARS::Snacks::438::7.3::16.3::72.1
+778::SOFT UNCOATED GRANOLA BARS::Snacks::443::7.4::17.2::67.3
+779::PEANUT BUTTER GRANOLA BARS::Snacks::426::10.5::15.8::64.4
+780::RICE-BASED ORIENTAL MIX::Snacks::506::17.31::25.58::51.62
+781::GENERAL MILLS CHEX MIX - TRADITIONAL FLAVOR::Snacks::424::8.83::10::74.77
+782::POPCORN::Snacks::387::12.94::4.54::77.78
+783::PORK SKINS::Snacks::544::61.3::31.3::0
+784::BARBACUE POTATO CHIPS::Snacks::485::6.41::30.69::56.19
+785::SOUR CREAM & ONION POTATO CHIPS::Snacks::531::8.1::33.9::51.5
+786::HARD SALTED PRETZELS::Snacks::384::10.04::2.94::80.39
+787::BROWN RICE CAKE::Snacks::387::8.2::2.8::81.5
+788::TORTILLA CHIPS::Snacks::472::7.1::20.68::67.78
+789::REGULAR TRAIL MIX::Snacks::462::13.8::29.4::44.9
+790::TROPICAL TRAIL MIX::Snacks::442::6.3::17.1::65.6
+791::CHOCOLATE TOOTSIE ROLL::Sweets::387::1.59::3.31::87.73
+792::ALMOND JOY CANDY BAR::Sweets::479::4.13::26.93::59.51
+793::TWIZZLERS CHERRY BITES::Sweets::338::2.97::1.7::79.38
+794::NESTLE BUTTERFINGER BAR::Sweets::459::5.4::18.9::72.9
+795::BUTTERSCOTH::Sweets::391::0.03::3.3::90.4
+796::CARAMELS::Sweets::382::4.6::8.1::77
+797::WHITE CHOCOLATE::Sweets::539::5.87::32.09::59.24
+798::VANILLA ICE CREAM::Sweets::180::4.78::4.83::29.46
+799::YORK PEPPERMINT PATTY::Sweets::384::2.19::7.17::80.99
+800::ORANGE SHERBET::Sweets::144::1.1::2::30.4
+801::JELLYBEANS::Sweets::375::0::0.05::93.55
+802::KIT KAT::Sweets::518::6.51::25.99::64.59
+803::CHOCOLATE ICE CREAM::Sweets::187::5::7.19::25.7
+804::MARS ALMOND BAR::Sweets::467::8.1::23::62.7
+805::MARSHMALLOWS::Sweets::318::1.8::0.2::81.3
+806::HALAVAH::Sweets::469::12.49::21.52::60.49
+807::MILK CHOCOLATE::Sweets::535::7.65::29.66::59.4
+808::BANANA PUDDING::Sweets::105::2.76::1.7::19.74
+809::CHOCOLATE PUDDING::Sweets::105::3.15::1.92::18.89
+810::MILKY WAY BAR::Sweets::456::4.01::17.23::71.17
+811::TOFFEE BAR::Sweets::535::3.13::32.18::61.72
+812::TRUFFLES::Sweets::510::6.21::33.76::44.88
+813::MILK CHOCOLATE M&M'S::Sweets::492::4.33::21.13::71.19
+814::REESE'S PEANUT BUTTER CUPS::Sweets::515::10.24::30.53::55.36
+815::REESE'S PIECES CANDY::Sweets::497::12.46::24.77::59.86
+816::SNICKERS BAR::Sweets::491::7.53::23.85::61.51
+817::STARBURST FRUIT CHEWS::Sweets::408::0.41::8.21::82.57
+818::THREE MUSKETEERS BAR::Sweets::436::2.6::12.75::77.77
+819::TWIX CARAMEL COOKIE BARS::Sweets::502::4.91::24.85::64.8
+820::CHEWING GUM::Sweets::360::0::0.3::96.7
+821::YORK BITES::Sweets::394::1.78::7.32::81.64
+822::CHOCOLATE MOUSSE::Sweets::225::4.14::16::16.07
+823::RICE PUDDING::Sweets::108::3.23::2.15::18.39
+824::FROZEN NOVELTIES::Sweets::24::0.5::0.1::6.2
+825::VANILLA PUDDING::Sweets::89::2.02::0::20.16
+826::TAPIOCA PUDDING::Sweets::94::1.44::0.35::21.31
+827::DOVE MILK CHOCOLATE::Sweets::546::5.94::31.72::59.78
+828::DOVE DARK CHOCOLATE::Sweets::520::5.19::32.45::59.4
+829::STRAWBERRY ICE CREAM::Sweets::192::3.2::8.4::27.6
+830::HONEY::Sweets::304::0.3::0::82.4
+831::JAMS AND PRESERVES::Sweets::278::0.37::0.07::68.86
+832::JELLIES::Sweets::266::0.15::0.02::69.95
+833::CANDIES,FUDGE,CHOC MARSHMLLW,W/ NUTS,PREPARED-BY-RECIPE::Sweets::474::3.24::21.11::67.69
+834::SNICKERS ALMOND BAR::Sweets::472::5.4::22.4::64.67
+835::MARMALADE::Sweets::246::0.3::0::66.3
+836::MOLASSES::Sweets::290::0::0.1::74.73
+837::STARBURST SOUR FRUIT CHEWS::Sweets::400::0.39::7.78::79.73
+838::BROWN SUGAR::Sweets::380::0.12::0::98.09
+839::GRANULATED SUGAR::Sweets::387::0::0::99.98
+840::POWDERED SUGAR::Sweets::389::0::0::99.77
+841::HERSHEY'S CHOCOLATE SYRUP::Sweets::153::1.4::0.97::34.56
+842::CORN SYRUP::Sweets::286::0::0::77.59
+843::MAPLE SYRUP::Sweets::260::0.04::0.06::67.04
+844::SKITTLES WILD BERRY BITE SIZE::Sweets::402::0.19::4.25::90.76
+845::SKITTLES TROPICAL BITE SIZE CANDY::Sweets::405::0.19::4.34::90.77
+846::SKITTLES SOURS ORIGINAL::Sweets::401::0.18::4::91.02
+847::SKITTLES ORIGINAL BITE SIZE CANDY::Sweets::405::0.19::4.37::90.78
+848::TARO CHIPS::Snacks::498::2.3::24.9::68.1
+849::FRUIT SNACKS::Sweets::352::0.08::0::87.97
+850::AMARANTH GRAIN::Cereal Grains and Pasta::371::13.56::7.02::65.25
+851::ARROWROOT FLOUR::Cereal Grains and Pasta::357::0.3::0.1::88.15
+852::HULLED BARLEY::Cereal Grains and Pasta::354::12.48::2.3::73.48
+853::PEARLED BARLEY::Cereal Grains and Pasta::352::9.91::1.16::77.72
+854::BUCKWHEAT::Cereal Grains and Pasta::343::13.25::3.4::71.5
+855::BULGUR::Cereal Grains and Pasta::342::12.29::1.33::75.87
+856::CORNMEAL::Cereal Grains and Pasta::362::8.12::3.59::76.89
+857::CORNSTARCH::Cereal Grains and Pasta::381::0.26::0.05::91.27
+858::COUSCOUS::Cereal Grains and Pasta::376::12.76::0.64::77.43
+859::WHITE HOMINY::Cereal Grains and Pasta::72::1.48::0.88::14.26
+860::MILLET::Cereal Grains and Pasta::378::11.02::4.22::72.85
+861::OAT BRAN::Cereal Grains and Pasta::246::17.3::7.03::66.22
+862::QUINOA::Cereal Grains and Pasta::368::14.12::6.07::64.16
+863::LONG-GRAIN BROWN RICE::Cereal Grains and Pasta::370::7.94::2.92::77.24
+864::OATS::Cereal Grains and Pasta::389::16.89::6.9::66.27
+865::MEDIUM-GRAIN BROWN RICE::Cereal Grains and Pasta::362::7.5::2.68::76.17
+866::LONG-GRAIN WHITE RICE::Cereal Grains and Pasta::365::7.13::0.66::79.95
+867::MEDIUM-GRAIN WHITE RICE::Cereal Grains and Pasta::360::6.61::0.58::79.34
+868::WHITE RICE FLOUR::Cereal Grains and Pasta::366::5.95::1.42::80.13
+869::RYE GRAIN::Cereal Grains and Pasta::338::10.34::1.63::75.86
+870::RYE FLOUR::Cereal Grains and Pasta::325::15.91::2.22::68.63
+871::SEMOLINA ::Cereal Grains and Pasta::360::12.68::1.05::72.83
+872::SORGHUM GRAIN::Cereal Grains and Pasta::329::10.62::3.46::72.09
+873::TAPIOCA::Cereal Grains and Pasta::358::0.19::0.02::88.69
+874::TRITICALE::Cereal Grains and Pasta::336::13.05::2.09::72.13
+875::TRITICALE FLOUR::Cereal Grains and Pasta::338::13.18::1.81::73.14
+876::HARD RED SPRING WHEAT::Cereal Grains and Pasta::329::15.4::1.92::68.03
+877::HARD RED WINTER WHEAT::Cereal Grains and Pasta::327::12.61::1.54::71.18
+878::SOFT RED WINTER WHEAT::Cereal Grains and Pasta::331::10.35::1.56::74.24
+879::HARD WHITE WHEAT::Cereal Grains and Pasta::342::11.31::1.71::75.9
+880::SOFT WHITE WHEAT::Cereal Grains and Pasta::340::10.69::1.99::75.36
+881::DURUM WHEAT::Cereal Grains and Pasta::339::13.68::2.47::71.13
+882::WHOLE-GRAIN WHEAT FLOUR::Cereal Grains and Pasta::340::13.21::2.5::71.97
+883::WILD RICE ::Cereal Grains and Pasta::357::14.73::1.08::74.9
+884::BROWN RICE FLOUR::Cereal Grains and Pasta::363::7.23::2.78::76.48
+885::CORN PASTA::Cereal Grains and Pasta::357::7.46::2.08::79.26
+886::PASTA ::Cereal Grains and Pasta::288::11.31::2.3::54.73
+887::MACARONI ::Cereal Grains and Pasta::371::13.04::1.51::74.67
+888::EGG NOODLES::Cereal Grains and Pasta::384::14.16::4.44::71.27
+889::CHOW MEIN::Cereal Grains and Pasta::475::8.11::15.43::72.8
+890::SPAGHETTI::Cereal Grains and Pasta::371::13.04::1.51::74.67
+891::RICE NOODLES::Cereal Grains and Pasta::364::5.95::0.56::80.18
+892::SPELT ::Cereal Grains and Pasta::338::14.57::2.43::70.19
+893::TEFF ::Cereal Grains and Pasta::367::13.3::2.38::73.13
+894::MACARONI & CHEESE::Meals, Entrees, and Side Dishes::82::3.38::2.46::11.52
+895::SPAGHETTI WITH MEAT SAUCE::Meals, Entrees, and Side Dishes::90::5.05::1.01::15.24
+896::BEEF MACARONI WITH TOMATO SAUCE::Meals, Entrees, and Side Dishes::113::5.89::1.96::17.99
+897::PASTA WITH SLICED FRANKS IN TOMATO SAUCE::Meals, Entrees, and Side Dishes::90::4.37::2.38::12.69
+898::TURKEY POT PIE::Meals, Entrees, and Side Dishes::176::6.5::8.8::17.7
+899::BEEF POT PIE::Meals, Entrees, and Side Dishes::220::7.25::11.39::22.05
+900::HOT POCKETS - BROCCOLI &CHEDDAR STUFFED::Meals, Entrees, and Side Dishes::235::8.9::8.6::30.4
+901::HOT POCKETS - HAM 'N CHEESE STUFFED::Meals, Entrees, and Side Dishes::241::9.16::9.14::30.55
+902::CHEESE-FILLED RAVIOLI::Meals, Entrees, and Side Dishes::77::2.48::1.45::13.64
+903::MEAT-FILLED RAVIOLI::Meals, Entrees, and Side Dishes::97::3.24::3.41::13.26
+904::TORTELLINI::Meals, Entrees, and Side Dishes::307::13.5::7.23::47
+905::CHILI CON CARNE WITH BEANS::Meals, Entrees, and Side Dishes::107::5.8::3.47::13.1
+906::BEEF STEW::Meals, Entrees, and Side Dishes::99::4.41::5.53::7.85
+907::CHICKEN POT PIE::Meals, Entrees, and Side Dishes::204::5.11::11.85::19.21
+908::CORNED BEEF WITH POTATOES::Meals, Entrees, and Side Dishes::164::8.73::10.24::9.27
+909::CHEESE LASAGNA::Meals, Entrees, and Side Dishes::130::6.54::5.33::13.84
+910::CHILI WITHOUT BEANS::Meals, Entrees, and Side Dishes::118::7.53::7.1::6.1
+911::SPAGHETTI WITH MEATBALLS IN TOMATO SAUCE::Meals, Entrees, and Side Dishes::100::4.37::4.11::11.45
+912::PASTA WITH TOMATO SAUCE::Meals, Entrees, and Side Dishes::70::2.22::0.44::14.22
+913::LASAGNA WITH MEAT::Meals, Entrees, and Side Dishes::101::6.81::2.23::13.5
+914::BEEF & BEAN BURRITO::Meals, Entrees, and Side Dishes::239::7.26::9.61::30.84
+915::BEAN & CHEESE BURRITO::Meals, Entrees, and Side Dishes::221::7.07::6.3::34.01
+916::PORK EGG ROLLS::Meals, Entrees, and Side Dishes::222::9.94::7.17::29.5
+917::CHICKEN EGG ROLLS::Meals, Entrees, and Side Dishes::197::10.44::4.51::28.54
+918::VEGETABLE EGG ROLLS::Meals, Entrees, and Side Dishes::214::5.95::6.97::31.77
+919::TURKEY STUFFING::Meals, Entrees, and Side Dishes::128::6.97::3.89::16.32
+920::RICE BOWL WITH CHICKEN::Meals, Entrees, and Side Dishes::126::5.65::1.56::22.46
+921::HOT POCKETS - MEATBALLS & MOZZARELLA STUFFED::Meals, Entrees, and Side Dishes::253::9.32::10.47::30.45
+922::LEAN POCKETS - HAM 'N CHEDDAR::Meals, Entrees, and Side Dishes::230::10.28::6.53::32.52
+923::LEAN POCKETS - MEATBALLS & MOZZARELLA::Meals, Entrees, and Side Dishes::240::10.49::7.7::32.28
+924::POTATO SALAD WITH EGG::Meals, Entrees, and Side Dishes::157::1.96::9.4::16.18
+925::PULLED PORK IN BARBECUE SAUCE::Meals, Entrees, and Side Dishes::168::13.19::4.42::18.74
+926::CORN DOGS::Meals, Entrees, and Side Dishes::250::8.57::12.02::26.96
+927::CHICKEN NUGGETS::Meals, Entrees, and Side Dishes::260::12.43::16.14::16.32
+928::CHICKEN TENDERS::Meals, Entrees, and Side Dishes::240::14.62::13.58::14.86
+929::RICE & VERMICELLI MIX::Meals, Entrees, and Side Dishes::358::10.64::1.32::75.8
+930::SOFT PRETZELS::Snacks::345::8.2::3.1::71.04
+931::SOY CHIPS::Snacks::385::26.5::7.35::53.15
+932::PLANTAIN CHIPS::Snacks::531::2.28::29.59::63.84
+933::CHINESE EGG DROP SOUP::Soups, Sauces, and Gravies::27::1.16::0.61::4.29
+934::HOT & SOUR CHINESE SOUP::Soups, Sauces, and Gravies::39::2.58::1.21::4.35
+935::WONTON SOUP::Soups, Sauces, and Gravies::32::2.08::0.26::5.25
+936::PACE PICO DE GALLO::Soups, Sauces, and Gravies::31::0::0::9.38
+937::PACE SALSA VERDE::Soups, Sauces, and Gravies::47::0::1.56::6.25
+938::PACE TEQUILA LIME SALSA::Soups, Sauces, and Gravies::47::0::0::9.38
+939::PACE TRIPLE PEPPER SALSA::Soups, Sauces, and Gravies::47::3.13::0::9.38
+940::PREGO PASTA::Soups, Sauces, and Gravies::54::1.54::1.15::10
+941::BEEF & VEGETABLE SOUP::Soups, Sauces, and Gravies::42::3.26::0.95::4.99
+942::DUCK SAUCE::Soups, Sauces, and Gravies::245::0.36::0.13::60.61
+943::SALSA VERDE::Soups, Sauces, and Gravies::38::1.13::0.89::6.36
+944::STEAK SAUCE::Soups, Sauces, and Gravies::95::1.25::0.23::22.04
+945::TARTAR SAUCE::Soups, Sauces, and Gravies::211::1::16.7::13.3
+946::SWEET & SOUR SAUCE::Soups, Sauces, and Gravies::150::0.27::0.02::38.22
+947::COCKTAIL SAUCE::Soups, Sauces, and Gravies::124::1.36::1.05::28.22
+948::BARBACUE SAUCE::Soups, Sauces, and Gravies::192::0.95::0.43::46.08
+949::PEANUT SAUCE::Soups, Sauces, and Gravies::257::6.31::16.02::22.02
+950::CHUNKY VEGETABLE SOUP::Soups, Sauces, and Gravies::50::1.16::0.51::10.28
+951::KELLOGG'S EGGO MINI MUFFIN TOPS, CHOCOLATE CHIP::Baked Products::300::5.2::11.2::45
+952::KELLOGG'S EGGO PANCAKES::Baked Products::245::5.3::7.4::39.9
+953::KELLOGG'S EGGO WAFFLES::Baked Products::325::5.5::11.9::49.5
+954::FAMOUS AMOS CHOCOLATE CHIP COOKIES::Baked Products::503::4.5::24.1::67.7
+955::FAMOUS AMOS CHOCOLATE CHIP PECAN COOKIES::Baked Products::519::5.8::27::63.8
+956::GIRL SCOUTS - CARAMEL DULCE DE LECHE COOKIES::Baked Products::520::5.1::27.1::64.8
+957::GIRL SCOUTS - CHALET COOKIES::Baked Products::478::4.2::19.1::72.3
+958::GIRL SCOUTS - DO-SI-DOS COOKIES::Baked Products::478::8.1::21.4::66
+959::GIRL SCOUTS - SAMOAS COOKIES::Baked Products::489::3.5::25.8::64.1
+960::GIRL SCOUTS - TAGALONGS COOKIES::Baked Products::558::8.1::35.3::52.2
+961::GIRL SCOUTS - THANK U BERRY MUNCH COOKIES::Baked Products::491::4.6::21.6::70
+962::GIRL SCOUTS - THIN MINTS COOKIES::Baked Products::502::4.5::24.2::67.3
+963::GIRL SCOUTS - TREFOILS COOKIES::Baked Products::498::5.7::22.9::68
+964::KELLOGG'S GARLIC & HERB CRACKERS::Baked Products::467::8.6::19.9::63.5
+965::KELLOGG'S MULTIGRAIN CRACKERS::Baked Products::415::8.6::20::65.7
+966::KELLOGG'S CORN FLAKES CRUMBS::Baked Products::367::7.5::0.4::84.4
+967::KELLOGG'S POP-TARTS APPLE STRUDEL TOASTER PASTRIES::Baked Products::395::4.4::10.8::70.5
+968::KELLOGG'S POP-TARTS BLUEBERRY MUFFIN TOASTER PASTRIES::Baked Products::397::4::10.9::70.9
+969::KELLOGG'S POP-TARTS CHOCOLATE CHIP COOKIE DOUGH TOASTER PASTRIES::Baked Products::387::4.5::10.5::69.4
+970::KELLOGG'S POP-TARTS CINNAMON ROLL TOASTER PASTRIES::Baked Products::416::4.7::14.1::67.8
+971::KELLOGG'S POP-TARTS CONFETTI CAKE TOASTER PASTRIES::Baked Products::375::4.4::7.4::73
+972::KELLOGG'S POP-TARTS COOKIES & CREME TOASTER PASTRIES::Baked Products::379::4.9::9.8::69.3
+973::KELLOGG'S POP-TARTS ORANGE CREAM TOASTER PASTRIES::Baked Products::401::3.9::11.5::70.6
+974::KELLOGG'S POP-TARTS PUMPKIN PIE TOASTER PASTRIES::Baked Products::394::4.7::10.5::70.6
+975::KELLOGG'S POP-TARTS SPRING BERRY TOASTER PASTRIES::Baked Products::390::4::9.6::72.3
+976::KELLOGG'S POP-TARTS SUGAR COOKIE TOASTER PASTRIES::Baked Products::393::4.5::10.6::70.2
+977::CHICKEN & CHEESE TAQUITOS::Meals, Entrees, and Side Dishes::284::9.21::12.54::33.63
+978::BEEF & CHEESE TAQUITOS::Meals, Entrees, and Side Dishes::287::9.4::12.79::33.46
+979::PIZZA ROLLS::Meals, Entrees, and Side Dishes::328::8.73::9.98::50.72
+980::POTSTICKER OR WONTON,PORK & VEG,FRZ,UNPREP::Meals, Entrees, and Side Dishes::136::8.28::5.52::13.28
+981::GRENADINE SYRUP::Sweets::268::0::0::66.91
+982::FROZEN YOGURT ::Sweets::127::3::3.6::21.6
+983::PAPAD::Legumes and Legume Products::371::25.56::3.25::59.87
+984::VEGETARIAN FILLETS::Legumes and Legume Products::290::23::18::9
+985::VEGETARIAN STEW::Legumes and Legume Products::123::17::3::7
+986::VEGETARIAN MEATLOAF OR PATTIES::Legumes and Legume Products::197::21::9::8
+987::TOMATO SAUCE::Vegetables and Vegetable Products::24::1.2::0.3::5.31
