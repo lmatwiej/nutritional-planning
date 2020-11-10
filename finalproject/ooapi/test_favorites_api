@@ -1,8 +1,7 @@
 import unittest
-import requests
 import json
 
-class TestMoviesIndex(unittest.TestCase):
+class Testunittest.TestCase):
 
     SITE_URL = 'http://student04.cse.nd.edu:510XX' # replace with your assigned port id
     print("Testing for server: " + SITE_URL)
