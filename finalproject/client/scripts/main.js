@@ -45,7 +45,7 @@ function makeRequest(url_base, port_num, action, key, message_body) {
         var str;
         var food_name = key.toLowerCase();
         for (i = 0; i < foodObj.length; i++) {
-            str = foodObj[i].name;
+            str = foodObj[i].name.toLowerCase();
             if (str.indexOf(key) >= 0) {
                 output.push(foodObj[i]);
             }
@@ -177,7 +177,7 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
         html+="<td>"+"Protein"+"</td>";
         html+="<td>"+"Fat"+"</td>";
         html+="<td>"+"Carbs"+"</td>";
-        html+="<td>"+"Favorite?"+"</td>";
+        html+="<td>"+"Food ID"+"</td>";
 
         html+="</tr>";
         for (var i = 0; i < output.length; i++) {
@@ -188,7 +188,7 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
           html+="<td>"+output[i].protein+"</td>";
           html+="<td>"+output[i].fat+"</td>";
           html+="<td>"+output[i].carb+"</td>";
-          html+="<td><button>★</button></td>";
+          html += "<td>" + output[i].id + "</td>";
 
           html+="</tr>";
 
