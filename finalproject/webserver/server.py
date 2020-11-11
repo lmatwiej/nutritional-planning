@@ -1,8 +1,9 @@
 import cherrypy
 from foodController import FoodController
 from resetController import ResetController
-## from dataController import DataController
-from ../ooapi/food_library import _food_database
+from favoritesController import FavoritesController
+from food_library import _food_database
+from favorites_library import _favorites_log
 
 
 class optionsController:
@@ -19,10 +20,11 @@ def start_service():
 
 
     mdb = _food_database()
+    mdd = _favorites_log()
 
     foodController     = FoodController(mdb=mdb)
     resetController     = ResetController(mdb=mdb)
-    ## favoritesController     = FavoritesController(mdb=mdb)
+    favoritesController     = FavoritesController(mdb=mdd)
     ## dataController     = DataController(mdb=mdb)
 
 
@@ -36,6 +38,13 @@ def start_service():
     dispatcher.connect('food_index_get', '/food_name/', controller=foodController, action = 'GET_INDEX', conditions=dict(method=['GET']))
     dispatcher.connect('food_index_post', '/food_name/', controller=foodController, action = 'POST_INDEX', conditions=dict(method=['POST']))
     dispatcher.connect('food_index_delete', '/food_name/', controller=foodController, action = 'DELETE_INDEX', conditions=dict(method=['DELETE']))
+
+    dispatcher.connect('favorites_get', '/favorites/:food_id', controller=favoritesController, action = 'GET_KEY', conditions=dict(method=['GET']))
+    dispatcher.connect('favorites_set', '/favorites/:food_id', controller=favoritesController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
+    dispatcher.connect('favorites_delete', '/favorites/:food_id', controller=favoritesController, action = 'DELETE_KEY', conditions=dict(method=['DELETE']))
+    dispatcher.connect('favorites_get', '/favorites/', controller=favoritesController, action = 'GET_INDEX', conditions=dict(method=['GET']))
+    dispatcher.connect('favorites_post', '/favorites/', controller=favoritesController, action = 'POST_INDEX', conditions=dict(method=['POST']))
+    dispatcher.connect('favorites_delete', '/favorites/', controller=favoritesController, action = 'DELETE_INDEX', conditions=dict(method=['DELETE']))
 
     dispatcher.connect('reset_put', '/reset/:food_id', controller=resetController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
     dispatcher.connect('reset_index_put', '/reset/', controller=resetController, action = 'PUT_INDEX', conditions=dict(method=['PUT']))

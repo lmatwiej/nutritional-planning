@@ -1,61 +1,149 @@
 import cherrypy
 import re, json
-from ../ooapi/favorites_library import _favorites_log
+from favorites_library import _favorites_log
 
-class favoritesController(object):
 
-        def __init__(self, log=None):
-            if log is None:
-                self.log = _favorites_log()
-            else:
-                self.log = log
+class FavoritesController(object):
+
+        def __init__(self, mdb=None):
+                if mdb is None:
+                        self.mdb = _favorites_log()
+                else:
+                        self.mdb = mdb
+
+                self.mdb.load_favorites('favorites.dat')
+
+        def GET_KEY(self, food_id):
+		#'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+                output = {'result':'success'}
+                food_id = int(food_id)
+
+                try:
+                        food = self.mdb.get_favorite(food_id)
+                        if food is not None:
+                                output['id'] = food_id
+                                output['name'] = food[0]
+                                output['group'] = food[1]
+                                output['kcal'] = food[2]
+                                output['prot'] = food[3]
+                                output['fat'] = food[4]
+                                output['carb'] = food[5]
+                        else:
+                                output['result'] = 'error'
+                                output['message'] = 'food not found'
+                except Exception as ex:
+                        output['result'] = 'error'
+                        output['message'] = str(ex)
+
+                return json.dumps(output)
+
+        def PUT_KEY(self, food_id):
+		#'''when PUT request for /movies/movie_id comes in, then we change that movie in the mdb'''
+                output = {'result':'success'}
+                food_id = int(food_id)
+
+                data = json.loads(cherrypy.request.body.read().decode('utf-8'))
+
+                food = list()
+                food.append(data['name'])
+                food.append(data['group'])
+                food.append(data['kcal'])
+                food.append(data['prot'])
+                food.append(data['fat'])
+                food.append(data['carb'])
+
+                self.mdb.set_favorite(food_id, food)
+
+                return json.dumps(output)
+
+        def DELETE_KEY(self, food_id):
+		#'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+                output = {'result':'success'}
+                food_id = int(food_id)
+
+                try:
+                        food = self.mdb.get_favorite(food_id)
+                        if food is not None:
+                                self.mdb.delete_favorite(food_id)
+                        else:
+                                output['result'] = 'error'
+                                output['message'] = 'food not found'
+                except Exception as ex:
+                        output['result'] = 'error'
+                        output['message'] = str(ex)
+
+                return json.dumps(output)
+
 
         def GET_INDEX(self):
-		'''when GET request for /favorites comes in, then respond with json string of all favorites'''
-            output = {'result':'success'}
+		#'''when GET request for /movies/ comes in, we respond with all the movie information in a json str'''
+                output = {'result':'success'}
+                output['food'] = []
 
-            try:
-                ratings = self.log.get_all_favs()
-                if ratings is not None:
-                    output["favorites"] = ratings
-                else:
-                    output["favorites"] = "No favorites"
-            except Exception as ex:
-                output['result'] = 'error'
-                output['message'] = str(ex)
+                try:
+                    for fid in self.mdb.get_favorites():
+                        food = self.mdb.get_favorite(fid)
+                        dfood = {'id':fid, 'name':food[0],'group':food[1],'kcal':food[2],'protein':food[3],'fat':food[4],'carb':food[5]}
+                        output['food'].append(dfood)
+                except Exception as ex:
+                    output['result'] = 'error'
+                    output['message'] = str(ex)
 
-            return json.dumps(output)
-
-        def GET_FILTERED(self, rating):
-        '''when GET request for /favorites/rating comes in, then respond with json string of all favorites that meet the rating cutoff'''
-            output = {'result:'success'}
-
-            result = self.log.get_filtered_ratings(rating)
-
-            if (not result):
-                output['favorites']= 'No favorites match the criteria'
-            else:
-                output['favorites'] = result
-
-            return json.dumps(output)
-
-        def PUT_KEY(self, name, rating):
-		'''when PUT request for /favorites/:name comes in, then we change the rating for that food'''
-            output = {'result':'success'}
-            data = json.loads(cherrypy.request.body.read().decode('utf-8'))
-            rating = data['rating']
-            if (self.log.update_rating(name, rating) == 1):
-                output['result'] = 'failure: name not found'
-            return json.dumps(output)
-
-        def DELETE_INDEX(self, name):
-		'''when DELETE for /favorites/name comes in, we remove just that favorite food from the log of ratings'''
-            self.log.delete_favorite(name)
+                return json.dumps(output)
 
         def POST_INDEX(self):
-		'''when POST for /favorites comes in, we take food name and rating from body of request, and respond with status'''
-            data = json.loads(cherrypy.request.body.read().decode('utf-8'))
-            name = data['key']
-            rating = data['value']
-            self.log.add_favorite(name, rating)
+		#'''when POST for /movies/ comes in, we take title and genres from body of request, and respond with the new movie_id and more'''
+                output = {'result':'success'}
+                data = json.loads(cherrypy.request.body.read().decode('utf-8'))
+                food = list()
+                food.append(data['name'])
+                food.append(data['group'])
+                food.append(data['kcal'])
+                food.append(data['prot'])
+                food.append(data['fat'])
+                food.append(data['carb'])
+                food_id = 1
+                for fid in self.mdb.get_favorites():
+                    food_id = fid
 
+                food_id = food_id + 1
+
+                self.mdb.set_favorite(food_id, food)
+                if self.mdb.get_favorite(food_id) is None:
+                    output['result'] = 'error'
+                    output['message'] = 'Food was not added'
+                else:
+                    output['id'] = food_id
+
+                return json.dumps(output)
+
+        def DELETE_INDEX(self):
+            output = {'result':'success'}
+
+            self.mdb.food_name.clear()
+            if self.mdb.food_name:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all names'
+            self.mdb.food_group.clear()
+            if self.mdb.food_group:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all groups'
+            self.mdb.food_kcal.clear()
+            if self.mdb.food_kcal:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all kcal'
+            self.mdb.food_protein.clear()
+            if self.mdb.food_protein:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all proteins'
+            self.mdb.food_fat.clear()
+            if self.mdb.food_fat:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all fat'
+            self.mdb.food_carb.clear()
+            if self.mdb.food_carb:
+                output['result'] = 'error'
+                output['message'] = 'Unable to clear all carb'
+
+
+            return json.dumps(output)
