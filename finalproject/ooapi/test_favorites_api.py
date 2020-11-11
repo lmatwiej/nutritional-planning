@@ -1,73 +1,80 @@
 import unittest
-from food_library import _food_database
+from favorites_library import _favorites_log
 
-class TestFoodAPI(unittest.TestCase):
+class TestFavoritesAPI(unittest.TestCase):
 
-    # Load the data & initialize any dictionaries necessary to test the API
-    fdb = _food_database()
-    fdb.load_food('food_data.dat')
+    # Initialize a favorites log
+    fav = _favorites_log()
 
-    # Helper Function That Reloads fdb in case changes occurred
-    def reload_fdb(self):
-        self.fdb = _food_database() # Call constructor again to wipe clean all changes
-        self.fdb.load_food('food_data.dat')
+    # Helper function that resets the log in case undesired changes occurred
+    def reset_log(self):
+        self.fav.reset_favs()
 
-    # Test if the get_foods utility successfully loads every food name
-    def test_get_foods(self):
-        # Check if length of the returned list equals the length of fdb.food_name
-        # Otherwise, checking each name in list and fdb.food_name would bloat the output
-        self.assertEqual(len(self.fdb.get_foods()), len(self.fdb.food_name))
+    # Test if utility returns entire dictionary
+    def test_get_all_favs(self):
+        # Check if what's returned is equal to self.fav
+        self.assertEqual(self.fav.favorites, self.fav.get_all_favs())
 
-    def test_get_food(self):
+	# Test if utility will return the correct rating
+    def test_get_fav(self):
 
-        # Randomly select foods to get after manually checking the data
-        food = self.fdb.get_food(120) # Sunflower Oil
-        self.assertEqual(food[0].lower(), "sunflower oil")
-        self.assertEqual(food[1].lower(), "fats and oils")
-        self.assertEqual(food[2], 884)
-        self.assertEqual(food[3], 0)
-        self.assertEqual(food[4], 100)
-        self.assertEqual(food[5], 0)
+		# First add a favorite to the log
+        self.fav.favorites["Pierogi"] = 10
 
-        # Previous unittests checked every element of the food list
-        # This next test only checks the name because it only intends to ensure consistent results
-        food = self.fdb.get_food(362) # Garlic
-        self.assertEqual(food[0].lower(), "garlic")
+        # Try to get that favorite back
+        return_rating = self.fav.get_fav("Pierogi")
 
-    # Test to see if a food can be added successfully
-    def test_set_food(self):
-        # Call reload to clean changes for the test
-        self.reload_fdb()
+		# Check if it worked
+        self.assertEqual(return_rating, 10)
 
-        # Create a new food and set it with the highest fid incremented
-        new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
-        new_fid = len(self.fdb.food_name) + 1
-        self.fdb.set_food(new_fid, new_food)
+    # Test to see if all favs with minimum rating can be returned
+    def test_get_filtered_ratings(self):
+		# Add some names and ratings to fav after initializing it again
+        self.reset_log()
+        self.fav.favorites["Blueberry"] = 2
+        self.fav.favorites["Raspberry"] = 3
+        self.fav.favorites["Strawberry"] = 4
+        self.fav.favorites["Blackberry"] = 5
+        self.fav.favorites["Watermelon"] = 6
+        self.fav.favorites["Orange"] = 7
+        self.fav.favorites["Pineapple"] = 8
+        self.fav.favorites["Lemon"] = 1
+        self.fav.favorites["Canteloupe"] = 5
+        self.fav.favorites["Coconut"] = 4
+
+        # Create a 'cheat sheet'
+        filtered = ["Watermelon", "Orange", "Pineapple"]
+
+        # Retrieve ratings over 5
+        returned = self.fav.get_filtered_ratings(6)
+
+        # Check results
+        for name in filtered:
+            self.assertTrue(name in returned)
+        self.assertTrue(len(filtered) == len(returned))
         
-        # Check if the newly added food can be retrieved
-        food = self.fdb.get_food(new_fid)
-        self.assertEqual(food[0].lower(), "pierogi")
-        self.assertEqual(food[1].lower(), "polish delicacy")
-        self.assertEqual(food[2], 300)
-        self.assertEqual(food[3], 10)
-        self.assertEqual(food[4], 10)
-        self.assertEqual(food[5], 20)
+    # Test to see if a favorite can be added successfully
+    def test_add_favorite(self):
+        # Add a favorite to an empty fav
+        self.reset_log()
+        self.fav.add_favorite("pierogi", 10)
 
-    # Test to see if a food can be added successfully
-    def test_delete_food(self):
-        # Call reload to clean changes for the test
-        self.reload_fdb()
+		# Check if the favorite is in the fav
+        self.assertTrue("pierogi" in self.fav.get_all_favs())
 
-        # Create a new food and set it with the highest fid incremented
-        new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
-        new_fid = len(self.fdb.food_name) + 1
-        self.fdb.set_food(new_fid, new_food)
+    # Test to see if a rating can be successfully updated
+    def test_add_favorite(self):
+
+        # Add pierogi with rating 1
+        self.reset_log()
+        self.fav.add_favorite("pierogi", 1)
+
+        # Update the rating to 10
+        self.fav.update_rating("pierogi", 10)
         
-        # Delete the newly added entry
-        self.fdb.delete_food(new_fid)
-
-        # Check if the entry is still there after being deleted
-        self.assertFalse(new_fid in self.fdb.food_name)
+        # Get the rating and check if it's set to 10
+        rating = self.fav.get_fav("pierogi")
+        self.assertEquals(rating, 10)
 
 if __name__ == "__main__":
     unittest.main()
