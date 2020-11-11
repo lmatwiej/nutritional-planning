@@ -13,6 +13,16 @@ var clear2Button = document.getElementById('clear2-button');
 clear2Button.onmouseup = clear2Form;
 console.log('After clear2 button');
 
+var favoritesButton = document.getElementById('favorites-add-button');
+favoritesButton.onmouseup = getFavoritesInfo;
+console.log('After favorites add button');
+var favoritesDeleteButton = document.getElementById('favorites-delete-button');
+favoritesDeleteButton.onmouseup = deleteFavoritesInfo;
+console.log('After favorites delete button');
+var favoritesClearButton = document.getElementById('favorites-clear-button');
+favoritesClearButton.onmouseup = clearFavoritesInfo;
+console.log('After favorites add button');
+
 function getFormInfo() {
     console.log('entered getFormInfo!');
     // call displayinfo
@@ -214,6 +224,86 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
 function clear2Form() {
   document.getElementById("answer2-label").innerHTML = "";
 }
+
+function getFavoritesInfo() {
+    console.log('entered getFavoritesInfo!');
+    // call displayinfo
+    var url_base = "http://student10.cse.nd.edu"
+    var port_num = 51077
+    var action = "SET"; // default
+    var message_body = null;
+    var key = document.getElementById("favorites-input").value;
+
+    makeFavoritesRequest(url_base, port_num, action, key, message_body);
+
+} // end of get form info
+
+function makeFavoritesRequest(url_base, port_num, action, key, message_body) {
+
+    // set up url
+    var xhr = new XMLHttpRequest(); // 1 - creating request object
+    var url = url_base + ":" + port_num + "/food_name/";
+    xhr.open(action, url, true); // 2 - associates request attributes with xhr
+
+    // set up onload
+    xhr.onload = function(e) { // triggered when response is received
+        // must be written before send
+        console.log(xhr.responseText);
+        var jsonData = JSON.parse(xhr.responseText);
+        var foodObj = jsonData["food"]; //bar
+        // var name = foodObj[1].name;
+        var output = [];
+        var i;
+        var str;
+        var food_name = key.toLowerCase();
+        for (i = 0; i < foodObj.length; i++) {
+            str = foodObj[i].name.toLowerCase();
+            if (str.indexOf(key) >= 0) {
+                output.push(foodObj[i]);
+            }
+        }
+
+        var html = "<table border='1|1'>";
+        html += "<tr>";
+        html += "<td>" + "Name" + "</td>";
+        html += "<td>" + "Group" + "</td>";
+        html += "<td>" + "KCal" + "</td>";
+        html += "<td>" + "Protein" + "</td>";
+        html += "<td>" + "Fat" + "</td>";
+        html += "<td>" + "Carbs" + "</td>";
+        html += "<td>" + "Food ID" + "</td>";
+
+        html += "</tr>";
+        for (var i = 0; i < output.length; i++) {
+            html += "<tr>";
+            html += "<td>" + output[i].name + "</td>";
+            html += "<td>" + output[i].group + "</td>";
+            html += "<td>" + output[i].kcal + "</td>";
+            html += "<td>" + output[i].protein + "</td>";
+            html += "<td>" + output[i].fat + "</td>";
+            html += "<td>" + output[i].carb + "</td>";
+            html += "<td>" + output[i].id + "</td>";
+
+            html += "</tr>";
+
+        }
+        html += "</table>";
+        document.getElementById("answer-label").innerHTML = html;
+
+        // do something
+        // document.getElementById("answer-label").innerHTML = JSON.stringify(output, null, 4);
+        // updateWithResponse(output);
+    }
+
+    // set up onerror
+    xhr.onerror = function(e) { // triggered when error response is received and must be before send
+        console.error(xhr.statusText);
+    }
+
+    // actually make the network call
+    xhr.send(message_body); // last step - this actually makes the request
+
+} // end of make nw call
 
 function updateWithResponse(response_text){
 
