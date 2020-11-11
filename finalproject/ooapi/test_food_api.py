@@ -1,72 +1,73 @@
 import unittest
-import requests
-import json
 
-class TestMoviesIndex(unittest.TestCase):
+class TestFoodAPI(unittest.TestCase):
 
-    SITE_URL = 'http://student04.cse.nd.edu:510XX' # replace with your assigned port id
-    print("Testing for server: " + SITE_URL)
-    MOVIES_URL = SITE_URL + '/movies/'
-    RESET_URL = SITE_URL + '/reset/'
+    # Load the data & initialize any dictionaries necessary to test the API
+    def __init__(self):
+        self.fdb = _food_database()
+        self.fdb.load_food('food_data.dat')
 
-    def reset_data(self):
-        m = {}
-        r = requests.put(self.RESET_URL, json.dumps(m))
+    # Helper Function That Reloads fdb in case changes occurred
+    def reload_fdb(self):
+        self.fdb = _food_database() # Call constructor again to wipe clean all changes
+        self.fdb.load_food('food_data.dat')
 
-    def is_json(self, resp):
-        try:
-            json.loads(resp)
-            return True
-        except ValueError:
-            return False
+    # Test if the get_foods utility successfully loads every food name
+    def test_get_foods(self):
+        # Check if length of the returned list equals the length of fdb.food_name
+        # Otherwise, checking each name in list and fdb.food_name would bloat the output
+        self.assertEqual(self.fdb.get_foods().len(), len(fdb.food_name))
 
-    def test_movies_index_get(self):
-        self.reset_data()
-        r = requests.get(self.MOVIES_URL)
-        self.assertTrue(self.is_json(r.content.decode()))
-        resp = json.loads(r.content.decode())
+    def test_get_food(self):
 
-        testmovie = {}
-        movies = resp['movies']
-        for movie in movies:
-            if movie['id'] == 32:
-                testmovie = movie
+        # Randomly select foods to get after manually checking the data
+        food = self.fdb.get_food(120) # Sunflower Oil
+        self.assertEqual(food[0].lower(), "sunflower oil")
+        self.assertEqual(food[1].lower(), "fats and oils")
+        self.assertEqual(food[2], 884)
+        self.assertEqual(food[3], 0)
+        self.assertEqual(food[4], 100)
+        self.assertEqual(food[5], 0)
 
-        self.assertEqual(testmovie['title'], 'Twelve Monkeys (1995)')
-        self.assertEqual(testmovie['genres'], 'Drama|Sci-Fi')
+        # Previous unittests checked every element of the food list
+        # This next test only checks the name because it only intends to ensure consistent results
+        food = self.fdb.get_food(362) # Garlic
+        self.assertEqual(food[0].lower(), "garlic")
 
-    def test_movies_index_post(self):
-        self.reset_data()
+    # Test to see if a food can be added successfully
+    def test_set_food(self):
+        # Call reload to clean changes for the test
+        self.reload_fdb()
 
-        m = {}
-        m['title'] = 'ABC'
-        m['genres'] = 'Sci-Fi|Fantasy'
-        r = requests.post(self.MOVIES_URL, data = json.dumps(m))
-        self.assertTrue(self.is_json(r.content.decode()))
-        resp = json.loads(r.content.decode())
-        self.assertEqual(resp['result'], 'success')
-        self.assertEqual(resp['id'], 3953)
+        # Create a new food and set it with the highest fid incremented
+        new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
+        new_fid = self.fdb.food_name.len() + 1
+        self.fdb.set_food(new_fid, new_food)
+        
+        # Check if the newly added food can be retrieved
+        food = self.fdb.get_food(new_fid)
+        self.assertEqual(food[0].lower(), "pierogi")
+        self.assertEqual(food[1].lower(), "polish delicacy")
+        self.assertEqual(food[2], 300)
+        self.assertEqual(food[3], 10)
+        self.assertEqual(food[4], 10)
+        self.assertEqual(food[5], 20)
 
-        r = requests.get(self.MOVIES_URL + str(resp['id']))
-        self.assertTrue(self.is_json(r.content.decode()))
-        resp = json.loads(r.content.decode())
-        self.assertEqual(resp['title'], m['title'])
-        self.assertEqual(resp['genres'], m['genres'])
+    # Test to see if a food can be added successfully
+    def test_delete_food(self):
+        # Call reload to clean changes for the test
+        self.reload_fdb()
 
-    def test_movies_index_delete(self):
-        self.reset_data()
+        # Create a new food and set it with the highest fid incremented
+        new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
+        new_fid = fdb.food_name.len() + 1
+        self.fdb.set_food(new_fid, new_food)
+        
+        # Delete the newly added entry
+        self.fdb.delete_food(new_fid)
 
-        m = {}
-        r = requests.delete(self.MOVIES_URL, data = json.dumps(m))
-        self.assertTrue(self.is_json(r.content.decode()))
-        resp = json.loads(r.content.decode())
-        self.assertEqual(resp['result'], 'success')
-
-        r = requests.get(self.MOVIES_URL)
-        self.assertTrue(self.is_json(r.content.decode()))
-        resp = json.loads(r.content.decode())
-        movies = resp['movies']
-        self.assertFalse(movies)
+        # Check if the entry is still there after being deleted
+        self.assertFalse(new_fid in self.fdb.food_name)
 
 if __name__ == "__main__":
     unittest.main()
