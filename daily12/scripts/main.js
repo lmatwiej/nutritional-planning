@@ -26,7 +26,7 @@ console.log('After favorites add button');
 function getFormInfo() {
     console.log('entered getFormInfo!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
+    var url_base = "http://student04.cse.nd.edu"
     var port_num = 51077
     var action = "GET"; // default
     var message_body = null;
@@ -111,7 +111,7 @@ function clearForm() {
 function getForm2Info() {
     console.log('entered getForm2Info!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
+    var url_base = "http://student04.cse.nd.edu"
     var port_num = 51077
     var action = "GET"; // default
     var message_body = null;
@@ -233,7 +233,7 @@ function clear2Form() {
 function getFavoritesInfo() {
     console.log('entered getFavoritesInfo!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
+    var url_base = "http://student04.cse.nd.edu"
     var port_num = 51077
     var action = "GET"; // default
     var message_body = null;
@@ -388,7 +388,7 @@ function makeFavoritesRequest3(url_base, port_num, action, key, message_body) {
 function deleteFavoritesInfo() {
     console.log('entered deleteFavoritesInfo!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
+    var url_base = "http://student04.cse.nd.edu"
     var port_num = 51077
     var action = "DELETE"; // default
     var message_body = null;
@@ -429,7 +429,7 @@ function makeDeleteRequest(url_base, port_num, action, key, message_body) {
 function clearFavoritesInfo() {
     console.log('entered clearFavoritesInfo!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
+    var url_base = "http://student04.cse.nd.edu"
     var port_num = 51077
     var action = "DELETE";
     var message_body = null;
