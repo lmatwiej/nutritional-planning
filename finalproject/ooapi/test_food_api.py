@@ -1,11 +1,11 @@
 import unittest
+from food_library import _food_database
 
 class TestFoodAPI(unittest.TestCase):
 
     # Load the data & initialize any dictionaries necessary to test the API
-    def __init__(self):
-        self.fdb = _food_database()
-        self.fdb.load_food('food_data.dat')
+    fdb = _food_database()
+    fdb.load_food('food_data.dat')
 
     # Helper Function That Reloads fdb in case changes occurred
     def reload_fdb(self):
@@ -16,7 +16,7 @@ class TestFoodAPI(unittest.TestCase):
     def test_get_foods(self):
         # Check if length of the returned list equals the length of fdb.food_name
         # Otherwise, checking each name in list and fdb.food_name would bloat the output
-        self.assertEqual(self.fdb.get_foods().len(), len(fdb.food_name))
+        self.assertEqual(len(self.fdb.get_foods()), len(self.fdb.food_name))
 
     def test_get_food(self):
 
@@ -41,7 +41,7 @@ class TestFoodAPI(unittest.TestCase):
 
         # Create a new food and set it with the highest fid incremented
         new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
-        new_fid = self.fdb.food_name.len() + 1
+        new_fid = len(self.fdb.food_name) + 1
         self.fdb.set_food(new_fid, new_food)
         
         # Check if the newly added food can be retrieved
@@ -60,7 +60,7 @@ class TestFoodAPI(unittest.TestCase):
 
         # Create a new food and set it with the highest fid incremented
         new_food = list(("Pierogi", "Polish Delicacy", 300,10,10,20))
-        new_fid = fdb.food_name.len() + 1
+        new_fid = len(self.fdb.food_name) + 1
         self.fdb.set_food(new_fid, new_food)
         
         # Delete the newly added entry
