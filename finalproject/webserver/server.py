@@ -27,10 +27,6 @@ def start_service():
     resetController     = ResetController(fdb, log)
     favoritesController     = FavoritesController(log)
 
-    ## dispatcher.connect('favorites_put', '/favorites/:key', controller=favoriteController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
-    ## dispatcher.connect('favorites_get', '/favorites/:key', controller=favoriteController, action = 'GET_KEY', conditions=dict(method=['GET']))
-    ## dispatcher.connect('favorites_delete', '/favorites/:key', controller=favoritesController, action = 'DELETE_KEY', conditions=dict(method=['DELETE']))
-
     # Connect endpoints to the foodController
     # JSON Specification in the README
     dispatcher.connect('food_name_get', '/food_name/:food_id', controller=foodController, action = 'GET_KEY', conditions=dict(method=['GET']))
