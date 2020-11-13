@@ -2,7 +2,7 @@ import unittest
 import requests
 import json
 
-class TestFoodIndex(unittest.TestCase):
+class TestFavoritesIndex(unittest.TestCase):
 
     # Define endpoints to which requests are made
     SITE_URL = 'http://student10.cse.nd.edu:51077'
