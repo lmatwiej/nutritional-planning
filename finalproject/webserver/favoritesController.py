@@ -23,11 +23,7 @@ class FavoritesController(object):
                         if food is not None:
                                 output['id'] = food_id
                                 output['name'] = food[0]
-                                output['group'] = food[1]
-                                output['kcal'] = food[2]
-                                output['prot'] = food[3]
-                                output['fat'] = food[4]
-                                output['carb'] = food[5]
+                                output['rating'] = food[1]
                         else:
                                 output['result'] = 'error'
                                 output['message'] = 'food not found'
@@ -46,11 +42,7 @@ class FavoritesController(object):
 
                 food = list()
                 food.append(data['name'])
-                food.append(data['group'])
-                food.append(data['kcal'])
-                food.append(data['prot'])
-                food.append(data['fat'])
-                food.append(data['carb'])
+                food.append(data['rating'])
 
                 self.mdb.set_favorite(food_id, food)
 
@@ -83,7 +75,7 @@ class FavoritesController(object):
                 try:
                     for fid in self.mdb.get_favorites():
                         food = self.mdb.get_favorite(fid)
-                        dfood = {'id':fid, 'name':food[0],'group':food[1],'kcal':food[2],'protein':food[3],'fat':food[4],'carb':food[5]}
+                        dfood = {'id':fid, 'name':food[0],'rating':food[1]}
                         output['food'].append(dfood)
                 except Exception as ex:
                     output['result'] = 'error'
@@ -97,11 +89,7 @@ class FavoritesController(object):
                 data = json.loads(cherrypy.request.body.read().decode('utf-8'))
                 food = list()
                 food.append(data['name'])
-                food.append(data['group'])
-                food.append(data['kcal'])
-                food.append(data['prot'])
-                food.append(data['fat'])
-                food.append(data['carb'])
+                food.append(data['rating'])
                 food_id = 1
                 for fid in self.mdb.get_favorites():
                     food_id = fid
@@ -124,26 +112,11 @@ class FavoritesController(object):
             if self.mdb.food_name:
                 output['result'] = 'error'
                 output['message'] = 'Unable to clear all names'
-            self.mdb.food_group.clear()
-            if self.mdb.food_group:
+            self.mdb.food_rating.clear()
+            if self.mdb.food_rating:
                 output['result'] = 'error'
-                output['message'] = 'Unable to clear all groups'
-            self.mdb.food_kcal.clear()
-            if self.mdb.food_kcal:
-                output['result'] = 'error'
-                output['message'] = 'Unable to clear all kcal'
-            self.mdb.food_protein.clear()
-            if self.mdb.food_protein:
-                output['result'] = 'error'
-                output['message'] = 'Unable to clear all proteins'
-            self.mdb.food_fat.clear()
-            if self.mdb.food_fat:
-                output['result'] = 'error'
-                output['message'] = 'Unable to clear all fat'
-            self.mdb.food_carb.clear()
-            if self.mdb.food_carb:
-                output['result'] = 'error'
-                output['message'] = 'Unable to clear all carb'
+                output['message'] = 'Unable to clear all ratings'
+
 
 
             return json.dumps(output)

@@ -1,12 +1,6 @@
-
-
 import cherrypy
 import re, json
-<<<<<<< HEAD
 from food_library import _food_database
-=======
-from .ooapi.food_library import _food_database
->>>>>>> 2bc5732783cecdd42576f4cf701dc46c180982ab
 
 class FoodController(object):
 

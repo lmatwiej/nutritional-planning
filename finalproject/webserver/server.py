@@ -1,15 +1,10 @@
 import cherrypy
 from foodController import FoodController
 from resetController import ResetController
-<<<<<<< HEAD
 from favoritesController import FavoritesController
 from food_library import _food_database
 from favorites_library import _favorites_log
-=======
 ## from dataController import DataController
-from .ooapi.food_library import _food_database
->>>>>>> 2bc5732783cecdd42576f4cf701dc46c180982ab
-
 
 class optionsController:
     def OPTIONS(self, *args, **kwargs):
