@@ -4,7 +4,7 @@ from favorites_library import _favorites_log
 class TestFavoritesAPI(unittest.TestCase):
 
     # Load the data & initialize any dictionaries necessary to test the API
-    log = _food_log()
+    log = _favorites_log()
     log.load_favorites('favorites.dat')
 
     # Helper Function That Reloads fdb in case changes occurred
@@ -13,11 +13,11 @@ class TestFavoritesAPI(unittest.TestCase):
         self.log.load_favorites('favorites.dat')
 
         # Initialize to have two favorites
-        self.food_name["1"] = "Tea"
-        self.food_rating["1"] = 10
+        self.log.food_name["1"] = "Tea"
+        self.log.food_rating["1"] = 10
 
-        self.food_name["2"] = "Honey"
-        self.food_rating["2"] = 8
+        self.log.food_name["2"] = "Honey"
+        self.log.food_rating["2"] = 8
 
     # Test if the get_foods utility successfully loads every food name
     def test_get_favorites(self):
@@ -29,7 +29,7 @@ class TestFavoritesAPI(unittest.TestCase):
         self.reload_log()
 
         # Check if it correctly retrieves tea rated at 10
-        food = self.log.get_favorite(1) 
+        food = self.log.get_favorite("1") 
         self.assertEqual(food[0], "Tea")
         self.assertEqual(food[1], 10)
 
@@ -41,7 +41,7 @@ class TestFavoritesAPI(unittest.TestCase):
         # Create a new food and set it with the highest fid incremented
         new_food = list(("Milk", 7))
         new_fid = len(self.log.food_name) + 1
-        self.log.set_food(new_fid, new_food)
+        self.log.set_favorite(new_fid, new_food)
         
         # Check if the newly added food can be retrieved
         food = self.log.get_favorite(new_fid)
@@ -54,7 +54,7 @@ class TestFavoritesAPI(unittest.TestCase):
         self.reload_log()
         
         # Delete Honey
-        self.log.delete_food(2)
+        self.log.delete_favorite("2")
 
         # Check if the entry is still there after being deleted
         self.assertFalse(2 in self.log.food_name)
