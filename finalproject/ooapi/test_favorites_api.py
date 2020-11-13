@@ -5,7 +5,7 @@ class TestFavoritesAPI(unittest.TestCase):
 
     # Load the data & initialize any dictionaries necessary to test the API
     log = _food_database()
-    log.load_favorites('favorites_data.dat')
+    log.load_favorites('favorites.dat')
 
     # Helper Function That Reloads fdb in case changes occurred
     def reload_log(self):
