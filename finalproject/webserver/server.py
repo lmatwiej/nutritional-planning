@@ -24,7 +24,7 @@ def start_service():
     log = _favorites_log()
 
     foodController     = FoodController(fdb)
-    resetController     = ResetController(fdb)
+    resetController     = ResetController(fdb, log)
     favoritesController     = FavoritesController(log)
 
     ## dispatcher.connect('favorites_put', '/favorites/:key', controller=favoriteController, action = 'PUT_KEY', conditions=dict(method=['PUT']))
