@@ -63,12 +63,12 @@ class TestReset(unittest.TestCase):
         # Check to see if correct information is there
         r = requests.get(self.FOOD_URL + str(food_id))
         resp = json.loads(r.content.decode('utf-8'))
-        self.assertEqual(testfood['name'], 'TURKEY BACON')
-        self.assertEqual(testfood['group'], 'Sausages and Luncheon Meats')
-        self.assertEqual(testfood['kcal'], 368)
-        self.assertEqual(testfood['protein'], 29.5)
-        self.assertEqual(testfood['fat'], 25.87)
-        self.assertEqual(testfood['carb'], 4.24)
+        self.assertEqual(resp['name'], 'TURKEY BACON')
+        self.assertEqual(resp['group'], 'Sausages and Luncheon Meats')
+        self.assertEqual(resp['kcal'], 368)
+        self.assertEqual(resp['prot'], 29.5)
+        self.assertEqual(resp['fat'], 25.87)
+        self.assertEqual(resp['carb'], 4.24)
 
 if __name__ == "__main__":
     unittest.main()

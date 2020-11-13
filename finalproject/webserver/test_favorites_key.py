@@ -31,6 +31,7 @@ class TestFavoritesKey(unittest.TestCase):
         m = {}
         m['name'] = 'Honey'
         m['rating'] = 7
+        m['id'] = 1
 
         # First post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -38,6 +39,7 @@ class TestFavoritesKey(unittest.TestCase):
 
         m['name'] = 'Tea'
         m['rating'] = 10
+        m['id'] = 2
 
         # Second post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -63,6 +65,7 @@ class TestFavoritesKey(unittest.TestCase):
         m = {}
         m['name'] = 'Honey'
         m['rating'] = 7
+        m['id'] = 1
 
         # First post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -70,7 +73,7 @@ class TestFavoritesKey(unittest.TestCase):
 
         m['name'] = 'Tea'
         m['rating'] = 10
-
+        m['id'] = 2
         # Second post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode()))
@@ -81,6 +84,7 @@ class TestFavoritesKey(unittest.TestCase):
         m = {}
         m['name'] = 'Tea'
         m['rating'] = 5
+        m['id'] = 2
 
         # Issue put request to id = 2 endpoint with the new information
 
@@ -106,6 +110,7 @@ class TestFavoritesKey(unittest.TestCase):
         m = {}
         m['name'] = 'Honey'
         m['rating'] = 7
+        m['id'] = 1
 
         # First post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -113,6 +118,7 @@ class TestFavoritesKey(unittest.TestCase):
 
         m['name'] = 'Tea'
         m['rating'] = 10
+        m['id'] = 2
 
         # Second post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))

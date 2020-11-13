@@ -31,6 +31,7 @@ class TestFavoritesIndex(unittest.TestCase):
         m = {}
         m['name'] = 'Honey'
         m['rating'] = 7
+        m['id'] = 1
 
         # First post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -38,6 +39,7 @@ class TestFavoritesIndex(unittest.TestCase):
 
         m['name'] = 'Tea'
         m['rating'] = 10
+        m['id'] = 2
 
         # Second post
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -71,6 +73,7 @@ class TestFavoritesIndex(unittest.TestCase):
         m = {}
         m['name'] = 'Honey'
         m['rating'] = 7
+        m['id'] = 1
 
         # Make the request with new info as the body
         r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
@@ -88,7 +91,7 @@ class TestFavoritesIndex(unittest.TestCase):
 
         # Test if the name and rating are honey and 7
         self.assertEqual(resp['name'], m['name'])
-        self.assertEqual(resp['group'], m['rating'])
+        self.assertEqual(resp['rating'], m['rating'])
 
     # Test for DELETE_INDEX
     def test_food_index_delete(self):
