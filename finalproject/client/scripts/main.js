@@ -19,6 +19,11 @@ console.log('After favorites add button');
 var favoritesDeleteButton = document.getElementById('favorites-delete-button');
 favoritesDeleteButton.onmouseup = deleteFavoritesInfo;
 console.log('After favorites delete button');
+
+var favoritesUpdateButton = document.getElementById('favorites-update-button');
+favoritesUpdateButton.onmouseup = updateFavoritesInfo;
+console.log('After favorites update button');
+
 var favoritesClearButton = document.getElementById('favorites-clear-button');
 favoritesClearButton.onmouseup = clearFavoritesInfo;
 console.log('After favorites add button');
@@ -55,14 +60,19 @@ function makeRequest(url_base, port_num, action, key, message_body) {
         var i;
         var str;
         var food_name = key.toLowerCase();
+        console.log("foodname:")
+        console.log(food_name);
         for (i = 0; i < foodObj.length; i++) {
             str = foodObj[i].name.toLowerCase();
-            if (str.indexOf(key) >= 0) {
+            if (str.indexOf(food_name) >= 0) {
                 output.push(foodObj[i]);
             }
         }
 
         var html = "<table border='1|1'>";
+        if(output.length > 0){
+
+
         html += "<tr>";
         html += "<td>" + "Name" + "</td>";
         html += "<td>" + "Group" + "</td>";
@@ -84,7 +94,10 @@ function makeRequest(url_base, port_num, action, key, message_body) {
             html += "<td>" + output[i].id + "</td>";
 
             html += "</tr>";
+          }
 
+        } else {
+          window.alert("Food Not Found! Try Again!");
         }
         html += "</table>";
         document.getElementById("answer-label").innerHTML = html;
@@ -141,6 +154,7 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
 
         var cals = parseFloat(document.getElementById("calstext").value);
         var prots = parseFloat(document.getElementById("protstext").value);
+        console.log(prots);
         var carbs = parseFloat(document.getElementById("carbstext").value);
         var fats = parseFloat(document.getElementById("fatstext").value);
         var calLen = document.getElementById('calstext');
@@ -150,17 +164,17 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
 
 
         for (i = 0; i < foodObj.length; i++) {
-          var tcals = foodObj[i].kcal;
-          var tprots = foodObj[i].protein;
-          var tcarbs = foodObj[i].carb;
-          var tfats = foodObj[i].fat;
+          var tcals = parseFloat(foodObj[i].kcal);
+          var tprots = parseFloat(foodObj[i].protein);
+          var tcarbs = parseFloat(foodObj[i].carb);
+          var tfats = parseFloat(foodObj[i].fat);
 
           if (!(tcals >= cals-5 && tcals <= cals+5)) {
             if(!(calLen.value.length == 0)) {
               continue;
             }
           }
-          if (!(tprots >= prots-3 && prots <= tprots+3)) {
+          if (!(tprots >= prots-1 && prots <= tprots+1)) {
             if(!(protLen.value.length == 0)) {
               continue;
             }
@@ -281,13 +295,45 @@ function makeFavoritesRequest(url_base, port_num, action, key, message_body) {
                 var fav_body = "{\"result\": \"success\", \"id\": ";
                 fav_body += id + ", \"name\": \"" + name + "\", \"rating\": \"" + rating + "\"}";
                 console.log(fav_body);
-                makeFavoritesRequest2(url_base, port_num, action, key, fav_body);
+                makeFavoritesRequestPost(url_base, port_num, action, key, fav_body);
             }
         }
         if (notfound) {
           document.getElementById("rating-input").value = "";
           window.alert("Food Not Found!");
         }
+    }
+
+    // set up onerror
+    xhr.onerror = function(e) { // triggered when error response is received and must be before send
+        console.error(xhr.statusText);
+    }
+
+    // actually make the network call
+    xhr.send(message_body); // last step - this actually makes the request
+
+} // end of make nw call
+
+function makeFavoritesRequestPost(url_base, port_num, action, key, message_body) {
+
+    // set up url
+    console.log('makeFavoritesRequestPOST');
+    action = "POST"
+    var xhr = new XMLHttpRequest(); // 1 - creating request object
+    var url = url_base + ":" + port_num + "/favorites/";
+    xhr.open(action, url, true); // 2 - associates request attributes with xhr
+
+    // set up onload
+    xhr.onload = function(e) { // triggered when response is received
+        // must be written before send
+        console.log(xhr.responseText);
+        var jsonData = JSON.parse(xhr.responseText);
+        console.log('before success');
+        if (jsonData['result'] == 'success') {
+          console.log('after success');
+          makeFavoritesRequest3(url_base, port_num, action, key, message_body);
+        }
+
     }
 
     // set up onerror
@@ -352,7 +398,7 @@ function makeFavoritesRequest3(url_base, port_num, action, key, message_body) {
                 output.push(foodObj[i]);
         }
 
-        var html = "<table border='1|1'>";
+        var html = "<table style='width:580px' border='1|1'>";
         html += "<tr>";
         html += "<td>" + "Name" + "</td>";
         html += "<td>" + "Rating" + "</td>";
@@ -393,8 +439,8 @@ function deleteFavoritesInfo() {
     var port_num = 51077
     var action = "DELETE"; // default
     var message_body = null;
-    var key = document.getElementById("favorites-delete-input").value;
-    document.getElementById("favorites-delete-input").value = "";
+    var key = document.getElementById("favorites-input").value;
+    document.getElementById("favorites-input").value = "";
 
     makeDeleteRequest(url_base, port_num, action, key, message_body);
 
@@ -427,12 +473,84 @@ function makeDeleteRequest(url_base, port_num, action, key, message_body) {
 
 } // end of make nw call
 
+function updateFavoritesInfo() {
+    console.log('entered deleteFavoritesInfo!');
+    // call displayinfo
+    var url_base = "http://student10.cse.nd.edu"
+    var port_num = 51077
+    var action = "GET"; // default
+    var message_body = null;
+    var key = document.getElementById("favorites-input").value;
+    document.getElementById("favorites-input").value = "";
+
+    makeUpdateRequest(url_base, port_num, action, key, message_body);
+
+} // end of get form info
+
+function makeUpdateRequest(url_base, port_num, action, key, message_body) {
+
+    // set up url
+    console.log('entered makeDeleteRequest!');
+    var xhr = new XMLHttpRequest(); // 1 - creating request object
+    var url = url_base + ":" + port_num + "/favorites/";
+    console.log(action)
+    console.log(url)
+    xhr.open(action, url, true); // 2 - associates request attributes with xhr
+
+    // set up onload
+    xhr.onload = function(e) { // triggered when response is received
+        // must be written before send
+        console.log(xhr.responseText);
+        var jsonData = JSON.parse(xhr.responseText);
+        var foodObj = jsonData["food"]; //bar
+        console.log(foodObj);
+        // var name = foodObj[1].name;
+        var i;
+        var str;
+        var food_id = parseInt(key);
+        var notfound = 1;
+        console.log('ahi vamos pues');
+        for (i = 0; i < foodObj.length; i++) {
+            if (foodObj[i].id == food_id) {
+                var notfound = 0;
+                console.log('ahi vamos pues2');
+                var message_fav_body = foodObj[i];
+                console.log(message_fav_body);
+                var id = message_fav_body["id"];
+                var name = message_fav_body["name"];
+                var rating = document.getElementById("rating-input").value;
+                document.getElementById("rating-input").value = "";
+                console.log(id);
+                console.log(name);
+                console.log(rating);
+                var fav_body = "{\"result\": \"success\", \"id\": ";
+                fav_body += id + ", \"name\": \"" + name + "\", \"rating\": \"" + rating + "\"}";
+                console.log(fav_body);
+                makeFavoritesRequest2(url_base, port_num, action, key, fav_body);
+            }
+        }
+        if (notfound) {
+          document.getElementById("rating-input").value = "";
+          window.alert("Food Not in Favorites!");
+        }
+    }
+
+    // set up onerror
+    xhr.onerror = function(e) { // triggered when error response is received and must be before send
+        console.error(xhr.statusText);
+    }
+
+    // actually make the network call
+    xhr.send(message_body); // last step - this actually makes the request
+
+} // end of make nw call
+
 function clearFavoritesInfo() {
     console.log('entered clearFavoritesInfo!');
     // call displayinfo
     var url_base = "http://student10.cse.nd.edu"
     var port_num = 51077
-    var action = "DELETE";
+    var action = "GET";
     var message_body = null;
 
     makeClearFavRequest(url_base, port_num, action, message_body);
@@ -453,6 +571,14 @@ function makeClearFavRequest(url_base, port_num, action, message_body) {
     xhr.onload = function(e) { // triggered when response is received
         // must be written before send
         console.log(xhr.responseText);
+        var jsonData = JSON.parse(xhr.responseText);
+        var foodObj = jsonData["food"]; //bar
+        console.log(foodObj);
+        // var name = foodObj[1].name;
+        console.log('ahi vamos pues');
+        for (i = 0; i < foodObj.length; i++) {
+            makeDeleteRequest(url_base, port_num, "DELETE", foodObj[i].id, message_body)
+          }
     }
 
     // set up onerror
