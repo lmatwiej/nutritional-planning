@@ -88,13 +88,9 @@ class FavoritesController(object):
                 output = {'result':'success'}
                 data = json.loads(cherrypy.request.body.read().decode('utf-8'))
                 food = list()
+                food_id = data['id']
                 food.append(data['name'])
                 food.append(data['rating'])
-                food_id = 1
-                for fid in self.mdb.get_favorites():
-                    food_id = fid
-
-                food_id = food_id + 1
 
                 self.mdb.set_favorite(food_id, food)
                 if self.mdb.get_favorite(food_id) is None:
