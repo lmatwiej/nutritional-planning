@@ -4,12 +4,12 @@ from favorites_library import _favorites_log
 class TestFavoritesAPI(unittest.TestCase):
 
     # Load the data & initialize any dictionaries necessary to test the API
-    log = _food_database()
+    log = _food_log()
     log.load_favorites('favorites.dat')
 
     # Helper Function That Reloads fdb in case changes occurred
     def reload_log(self):
-        self.log = _favorites_database() # Call constructor again to wipe clean all changes
+        self.log = _favorites_log() # Call constructor again to wipe clean all changes
         self.log.load_favorites('favorites.dat')
 
         # Initialize to have two favorites
