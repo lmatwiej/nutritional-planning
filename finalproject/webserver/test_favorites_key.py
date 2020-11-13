@@ -2,7 +2,7 @@ import unittest
 import requests
 import json
 
-class TestFood(unittest.TestCase):
+class TestFavoritesKey(unittest.TestCase):
 
     # Initialize endpoints to be used
     SITE_URL = 'http://student10.cse.nd.edu:51077' # replace with your port number and
