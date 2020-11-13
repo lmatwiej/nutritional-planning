@@ -147,10 +147,6 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
         var protLen = document.getElementById('protstext');
         var carbLen = document.getElementById('carbstext');
         var fatLen = document.getElementById('fatstext');
-        document.getElementById("calstext").value = "";
-        document.getElementById("protstext").value = "";
-        document.getElementById("carbstext").value = "";
-        document.getElementById("fatstext").value = "";
 
 
         for (i = 0; i < foodObj.length; i++) {
@@ -210,6 +206,11 @@ function makeRequest2(url_base, port_num, action, key, message_body) {
         }
         html+="</table>";
         document.getElementById("answer2-label").innerHTML = html;
+
+        document.getElementById("calstext").value = "";
+        document.getElementById("protstext").value = "";
+        document.getElementById("carbstext").value = "";
+        document.getElementById("fatstext").value = "";
 
         // do something
         // document.getElementById("answer-label").innerHTML = JSON.stringify(output, null, 4);
