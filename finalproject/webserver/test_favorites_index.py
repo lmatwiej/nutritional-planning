@@ -7,7 +7,7 @@ class TestFoodIndex(unittest.TestCase):
     # Define endpoints to which requests are made
     SITE_URL = 'http://student10.cse.nd.edu:51077'
     print("Testing for server: " + SITE_URL)
-    FOOD_URL = SITE_URL + '/food_name/'
+    FAVORITES_URL = SITE_URL + '/favorites/'
     RESET_URL = SITE_URL + '/reset/'
 
     # Helper function that resets the data so individual tests do not affect each other
@@ -27,8 +27,24 @@ class TestFoodIndex(unittest.TestCase):
     def test_food_index_get(self):
         self.reset_data()
 
-        # Send get request to /food_name
-        r = requests.get(self.FOOD_URL)
+        # Add two favorites to an empty favorites log
+        m = {}
+        m['name'] = 'Honey'
+        m['rating'] = 7
+
+        # First post
+        r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
+        self.assertTrue(self.is_json(r.content.decode()))
+
+        m['name'] = 'Tea'
+        m['rating'] = 10
+
+        # Second post
+        r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
+        self.assertTrue(self.is_json(r.content.decode()))
+
+        # Send get request to /favorites/ -- this should return id's 1 and 2
+        r = requests.get(self.FAVORITES_URL)
 
         # Check if JSON
         self.assertTrue(self.is_json(r.content.decode()))
@@ -36,55 +52,43 @@ class TestFoodIndex(unittest.TestCase):
         # Load all the dictionary into a string
         resp = json.loads(r.content.decode())
 
-        # Iterate through all the foods and pick out id = 200
+        # Iterate through all the foods and pick out id = 1
         testfood = {}
         foods = resp['food']
         for food in foods:
-            if food['id'] == 2000:
-                testfood = food
+            if food['id'] == 2:
+                testfood = food #hould be tea, 10
 
         # Test if correct food retrieved under id = 200
-        self.assertEqual(testfood['name'], 'TURKEY BACON')
-        self.assertEqual(testfood['group'], 'Sausages and Luncheon Meats')
-        self.assertEqual(testfood['kcal'], 211)
-        self.assertEqual(testfood['protein'], 13.06)
-        self.assertEqual(testfood['fat'], 16.06)
-        self.assertEqual(testfood['carb'], 3.45)
+        self.assertEqual(testfood['name'], 'Tea')
+        self.assertEqual(testfood['rating'], 10)
 
     # Test for POST Index
     def test_food_index_post(self):
         self.reset_data()
 
-        # Create a dictionary with food information to be added
+        # Create a dictionary with name, rating to be added
         m = {}
-        m['name'] = 'Gerber'
-        m['group'] = 'Baby Foods'
-        m['kcal'] = '66'
-        m['prot'] = '2'
-        m['fat'] = '3'
-        m['carb'] = '8'
+        m['name'] = 'Honey'
+        m['rating'] = 7
 
         # Make the request with new info as the body
-        r = requests.post(self.FOOD_URL, data = json.dumps(m))
+        r = requests.post(self.FAVORITES_URL, data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode()))
         resp = json.loads(r.content.decode())
 
-        # Test if the posted id was 988 and response was success
+        # Test if the posted id was 1; this should be the first favorite
         self.assertEqual(resp['result'], 'success')
-        self.assertEqual(resp['id'], 988)
+        self.assertEqual(resp['id'], 1)
 
-        # Test to see if a get request to the FOOD_URL with id 988 will return newly added entry
-        r = requests.get(self.FOOD_URL + str(resp['id']))
+        # Test to see if a get request to the FOOD_URL with id 1 will return newly added entry
+        r = requests.get(self.FAVORITES_URL + str(resp['id']))
         self.assertTrue(self.is_json(r.content.decode()))
         resp = json.loads(r.content.decode())
 
-        # Test each entry element
+        # Test if the name and rating are honey and 7
         self.assertEqual(resp['name'], m['name'])
-        self.assertEqual(resp['group'], m['group'])
-        self.assertEqual(resp['kcal'], m['kcal'])
-        self.assertEqual(resp['prot'], m['prot'])
-        self.assertEqual(resp['fat'], m['fat'])
-        self.assertEqual(resp['carb'], m['carb'])
+        self.assertEqual(resp['group'], m['rating'])
 
     # Test for DELETE_INDEX
     def test_food_index_delete(self):
@@ -92,17 +96,17 @@ class TestFoodIndex(unittest.TestCase):
 
         # Empty dictionary is message body per specification
         m = {}
-        r = requests.delete(self.FOOD_URL, data = json.dumps(m))
+        r = requests.delete(self.FAVORITES_URL, data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode()))
         resp = json.loads(r.content.decode())
         self.assertEqual(resp['result'], 'success')
 
         # Try to get all the foods
-        r = requests.get(self.FOOD_URL)
+        r = requests.get(self.FAVORITES_URL)
         self.assertTrue(self.is_json(r.content.decode()))
         resp = json.loads(r.content.decode())
 
-        # Test is successful if the food dictionary returned is empty
+        # Test is successful if the favorites dictionary returned is empty
         food = resp['food']
         self.assertFalse(food)
 
