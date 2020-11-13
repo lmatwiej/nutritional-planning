@@ -46,10 +46,10 @@ class TestFoodIndex(unittest.TestCase):
         # Test if correct food retrieved under id = 200
         self.assertEqual(testfood['name'], 'TURKEY BACON')
         self.assertEqual(testfood['group'], 'Sausages and Luncheon Meats')
-        self.assertEqual(testfood['kcal'], 211)
-        self.assertEqual(testfood['protein'], 13.06)
-        self.assertEqual(testfood['fat'], 16.06)
-        self.assertEqual(testfood['carb'], 3.45)
+        self.assertEqual(testfood['kcal'], 368)
+        self.assertEqual(testfood['protein'], 29.5)
+        self.assertEqual(testfood['fat'], 25.87)
+        self.assertEqual(testfood['carb'], 4.24)
 
     # Test for POST Index
     def test_food_index_post(self):

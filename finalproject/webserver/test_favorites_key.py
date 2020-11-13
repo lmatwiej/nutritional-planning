@@ -94,9 +94,9 @@ class TestFavoritesKey(unittest.TestCase):
         self.assertTrue(self.is_json(r.content.decode('utf-8')))
         resp = json.loads(r.content.decode('utf-8'))
 
-        # Unittests for each field of info under id = 24; should have rating 5
+        # Unittests for each field of info under id = 2; should have rating 5
         self.assertEqual(resp['name'], 'Tea')
-        self.assertEqual(resp['rating'], 2)
+        self.assertEqual(resp['rating'], 5)
 
     # Test for DELETE_KEY
     def test_food_delete_key(self):
@@ -123,7 +123,7 @@ class TestFavoritesKey(unittest.TestCase):
 
         # Make a delete request and load response
         m = {}
-        r = requests.delete(self.FAVORITES_URL + str(food_id), data = json.dumps(m)
+        r = requests.delete(self.FAVORITES_URL + str(food_id), data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode('utf-8')))
         resp = json.loads(r.content.decode('utf-8'))
         self.assertEqual(resp['result'], 'success')

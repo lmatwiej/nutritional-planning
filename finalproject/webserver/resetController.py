@@ -27,7 +27,7 @@ class ResetController(object):
         self.mdb.load_food('food_data.dat')
 
         self.log.__init__()
-        self.log.load_food('food_data.dat')
+        self.log.load_favorites('favorites.dat')
 
         return json.dumps(output)
 

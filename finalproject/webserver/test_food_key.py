@@ -58,6 +58,7 @@ class TestFood(unittest.TestCase):
         m['fat'] = '3'
         m['carb'] = '8'
 
+        food_id = 90
         # Issue put request to food_id endpoint with the new information
         r = requests.put(self.FOOD_URL + str(food_id), data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode('utf-8')))
@@ -86,7 +87,7 @@ class TestFood(unittest.TestCase):
 
         # Make a delete request and load response
         m = {}
-        r = requests.delete(self.FOOD_URL + str(food_id), data = json.dumps(m)
+        r = requests.delete(self.FOOD_URL + str(food_id), data = json.dumps(m))
         self.assertTrue(self.is_json(r.content.decode('utf-8')))
         resp = json.loads(r.content.decode('utf-8'))
         self.assertEqual(resp['result'], 'success')
