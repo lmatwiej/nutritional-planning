@@ -12,7 +12,7 @@ class ResetController(object):
             self.mdb = mdb
 
     def PUT_INDEX(self):
-	'''when PUT request comes in to /reset/ endpoint, then the movie database is reloaded'''
+	# when PUT request comes in to /reset/ endpoint, then the movie database is reloaded'''
         output = {'result':'success'}
 
         # data = json.loads(cherrypy.request.body.read().decode())
@@ -23,7 +23,7 @@ class ResetController(object):
         return json.dumps(output)
 
     def PUT_KEY(self, food_id):
-	'''when PUT request comes in for /reset/food_id endpoint, then that food_id is reloaded and updated in mdb'''
+	 # when PUT request comes in for /reset/food_id endpoint, then that food_id is reloaded and updated in mdb'''
         output = {'result':'success'}
         fid = int(food_id)
 

@@ -15,7 +15,7 @@ class FoodController(object):
                 self.mdb.load_food('food_data.dat')
 
         def GET_KEY(self, food_id):
-		'''when GET request for /food_name/food_id comes in, then we respond with json string'''
+		# when GET request for /food_name/food_id comes in, then we respond with json string'''
                 output = {'result':'success'}
 
                 food_id = int(food_id)
@@ -43,7 +43,7 @@ class FoodController(object):
                 return json.dumps(output)
 
         def PUT_KEY(self, food_id):
-		'''when PUT request for /food_name/food_id comes in, then we change that food entry according to message body'''
+		# when PUT request for /food_name/food_id comes in, then we change that food entry according to message body'''
                 output = {'result':'success'}
 
                 # Load the data and initialize the food_id
@@ -64,7 +64,7 @@ class FoodController(object):
                 return json.dumps(output)
 
         def DELETE_KEY(self, food_id):
-		'''when DELETE request for /food_name/food_id comes in, then we remove that food_id from database'''
+		# when DELETE request for /food_name/food_id comes in, then we remove that food_id from database'''
                 output = {'result':'success'}
                 food_id = int(food_id)
 
@@ -89,7 +89,7 @@ class FoodController(object):
 
 
         def GET_INDEX(self):
-		'''when GET request for /food_name/ comes in, we respond with all the food information in a json str'''
+		# when GET request for /food_name/ comes in, we respond with all the food information in a json str'''
 
                 output = {'result':'success'}
                 output['food'] = []
@@ -111,7 +111,7 @@ class FoodController(object):
                 return json.dumps(output)
 
         def POST_INDEX(self):
-		'''when POST for /food_name comes in, we take request body with new food information and add it to the database'''
+		# when POST for /food_name comes in, we take request body with new food information and add it to the database'''
                 output = {'result':'success'}
 
                 # Load the data from request
@@ -143,7 +143,7 @@ class FoodController(object):
                 return json.dumps(output)
 
         def DELETE_INDEX(self):
-                '''when DELETE for /food_name/ comes in, we clear every entry from the database'''
+                # when DELETE for /food_name/ comes in, we clear every entry from the database'''
                 output = {'result':'success'}
 
                 # Clear each dictioary in the database and check if clear
