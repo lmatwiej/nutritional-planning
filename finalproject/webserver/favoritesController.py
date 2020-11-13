@@ -14,7 +14,7 @@ class FavoritesController(object):
                 self.mdb.load_favorites('favorites.dat')
 
         def GET_KEY(self, food_id):
-		#'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+		#'''when GET request for /favorites/food_id comes in, then we respond with json string'''
                 output = {'result':'success'}
                 food_id = int(food_id)
 
@@ -34,7 +34,7 @@ class FavoritesController(object):
                 return json.dumps(output)
 
         def PUT_KEY(self, food_id):
-		#'''when PUT request for /movies/movie_id comes in, then we change that movie in the mdb'''
+		#'''when PUT request for /favorites/food_id comes in, then we change that favorite'''
                 output = {'result':'success'}
                 food_id = int(food_id)
 
@@ -49,7 +49,7 @@ class FavoritesController(object):
                 return json.dumps(output)
 
         def DELETE_KEY(self, food_id):
-		#'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+		#'''when GET request for /favorites/food_id comes in, then we delete that specific favorite'''
                 output = {'result':'success'}
                 food_id = int(food_id)
 
@@ -68,7 +68,7 @@ class FavoritesController(object):
 
 
         def GET_INDEX(self):
-		#'''when GET request for /movies/ comes in, we respond with all the movie information in a json str'''
+		#'''when GET request for /favorites/ comes in, we respond with all the favorites and their ratings'''
                 output = {'result':'success'}
                 output['food'] = []
 
@@ -84,7 +84,7 @@ class FavoritesController(object):
                 return json.dumps(output)
 
         def POST_INDEX(self):
-		#'''when POST for /movies/ comes in, we take title and genres from body of request, and respond with the new movie_id and more'''
+		#'''when POST for /favorites/ comes in, we add the data to the favorites'''
                 output = {'result':'success'}
                 data = json.loads(cherrypy.request.body.read().decode('utf-8'))
                 food = list()
@@ -102,6 +102,7 @@ class FavoritesController(object):
                 return json.dumps(output)
 
         def DELETE_INDEX(self):
+            #'''when DELETE for /favorites/ comes in, we delete all the favorites'''
             output = {'result':'success'}
 
             self.mdb.food_name.clear()
