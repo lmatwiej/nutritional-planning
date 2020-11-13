@@ -40,7 +40,7 @@ class TestFoodIndex(unittest.TestCase):
         testfood = {}
         foods = resp['food']
         for food in foods:
-            if food['id'] == 2000:
+            if food['id'] == 200:
                 testfood = food
 
         # Test if correct food retrieved under id = 200
