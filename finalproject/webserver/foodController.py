@@ -16,14 +16,17 @@ class FoodController(object):
                 self.mdb.load_food('food_data.dat')
 
         def GET_KEY(self, food_id):
-		'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+		'''when GET request for /food_name/food_id comes in, then we respond with json string'''
                 output = {'result':'success'}
+
                 food_id = int(food_id)
-
-
                 try:
+                        # Utilize API function to get food under the endpoint food_id
                         food = self.mdb.get_food(food_id)
+
+                        # If food_id is not in database, food will be None
                         if food is not None:
+                                # Populate the output with new data
                                 output['id'] = food_id
                                 output['name'] = food[0]
                                 output['group'] = food[1]
@@ -41,12 +44,14 @@ class FoodController(object):
                 return json.dumps(output)
 
         def PUT_KEY(self, food_id):
-		#'''when PUT request for /movies/movie_id comes in, then we change that movie in the mdb'''
+		'''when PUT request for /food_name/food_id comes in, then we change that food entry according to message body'''
                 output = {'result':'success'}
-                food_id = int(food_id)
 
+                # Load the data and initialize the food_id
+                food_id = int(food_id)
                 data = json.loads(cherrypy.request.body.read().decode('utf-8'))
 
+                # Create list with request body data
                 food = list()
                 food.append(data['name'])
                 food.append(data['group'])
@@ -55,21 +60,26 @@ class FoodController(object):
                 food.append(data['fat'])
                 food.append(data['carb'])
 
+                # Call set_food API to update the information at id = food_id
                 self.mdb.set_food(food_id, food)
-
                 return json.dumps(output)
 
         def DELETE_KEY(self, food_id):
-		#'''when GET request for /movies/movie_id comes in, then we respond with json string'''
+		'''when DELETE request for /food_name/food_id comes in, then we remove that food_id from database'''
                 output = {'result':'success'}
                 food_id = int(food_id)
 
-
                 try:
+                        # First try to get the food_id
                         food = self.mdb.get_food(food_id)
+
+                        # If food not None, food_id is present can be deleted
                         if food is not None:
+
+                                # Proceed to delete
                                 self.mdb.delete_food(food_id)
-                        else:
+                        # Any errors
+                        else: 
                                 output['result'] = 'error'
                                 output['message'] = 'food not found'
                 except Exception as ex:
