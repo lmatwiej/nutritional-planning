@@ -31,8 +31,8 @@ console.log('After favorites add button');
 function getFormInfo() {
     console.log('entered getFormInfo!');
     // call displayinfo
-    var url_base = "http://student10.cse.nd.edu"
-    var port_num = 51077
+    var url_base = "http://127.0.0.1"
+    var port_num = 7777
     var action = "GET"; // default
     var message_body = null;
     var key = document.getElementById("food-input").value;
